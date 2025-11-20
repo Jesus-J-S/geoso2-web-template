@@ -1,0 +1,14 @@
+{
+    "titulo": "Prueba de Concepto - Jinja2",
+    "nombre": "Luis Izquierdo",
+    "email": "luis@example.com",
+    "mensaje": "Este es un mensaje de prueba generado dinámicamente con Jinja2. El template ha sido modificado exitosamente con valores desde Python.",
+    "items": [
+        "Elemento 1: Configuración del entorno virtual",
+        "Elemento 2: Instalación de Jinja2",
+        "Elemento 3: Creación del template HTML",
+        "Elemento 4: Script de Python funcionando",
+        "Elemento 5: Generación del output.html",
+        "Elemento 6: Enseñar la web"
+    ]
+}
