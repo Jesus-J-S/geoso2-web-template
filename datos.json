@@ -1,11 +1,13 @@
 {
-    "titulo": "aaa",
-    "nombre": "jesus",
+    "titulo": "prueba",
+    "nombre": "prueba",
     "email": "prueba@",
-    "mensaje": "aaaa",
+    "mensaje": "mensaje de prueba",
     "items": [
-        "aaa"
+        "1",
+        "2",
+        "3"
     ],
-    "imagen": "",
-    "fecha": "2025-11-20 18:02:07"
+    "imagen": "/Users/jesus/Desktop/img1.png",
+    "fecha": "2025-11-24 14:41:19"
 }

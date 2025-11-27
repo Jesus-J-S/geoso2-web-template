@@ -7,6 +7,7 @@ import os
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 import sys
+import shutil
 
 # Configurar Jinja2 para cargar la plantilla desde el directorio actual
 env = Environment(loader=FileSystemLoader('.'))
@@ -98,9 +99,9 @@ class WizardNoticias(tk.Tk):
         # Guardar preview temporal y abrir en navegador con ruta absoluta
         html = self.render_html()
         try:
-            with open("preview.html", "w", encoding="utf-8") as f:
+            with open("data/preview.html", "w", encoding="utf-8") as f:
                 f.write(html)
-            ruta = os.path.abspath("preview.html")
+            ruta = os.path.abspath("data/preview.html")
             webbrowser.open(f"file:///{ruta}")
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo abrir el navegador:\n{e}")
@@ -264,6 +265,11 @@ class PasoImagen(BaseStep):
             self.entry_imagen.delete(0, tk.END)
             self.entry_imagen.insert(0, ruta)
 
+            nombre = os.path.basename(ruta)
+            nueva_ruta = os.path.join("data/img", nombre)
+            shutil.copy(ruta, nueva_ruta)
+
+
     def on_back(self):
         self.controller.show_frame("PasoMensaje")
 
@@ -288,10 +294,11 @@ class PasoPreview(BaseStep):
         actions = tk.Frame(self.content)
         actions.pack(fill=tk.X, pady=8)
         tk.Button(actions, text="Abrir en navegador", command=self.controller.open_preview_in_browser).pack(side=tk.LEFT)
+        tk.Label(actions, text="(Se abrirá un archivo temporal llamado preview.html)").pack(side=tk.LEFT, padx=10)
 
         # Cambiar el botón principal a "Subir"
         self.btn_next.config(text="Subir")
-
+        
     def set_preview(self, html):
         self.preview_text.delete("1.0", tk.END)
         self.preview_text.insert(tk.END, html)
@@ -302,6 +309,7 @@ class PasoPreview(BaseStep):
     def on_next(self):
         # Subir: guardar JSON y generar output.html
         self.controller.save_json_and_generate()
+        
 
 
 if __name__ == "__main__":
