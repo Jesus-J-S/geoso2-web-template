@@ -8,11 +8,15 @@ from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 import sys
 import shutil
+import re
 
 # Configurar Jinja2 para cargar la plantilla desde el directorio actual
 env = Environment(loader=FileSystemLoader('.'))
 template = env.get_template('template.html')
 
+def convertir_links(texto):
+    url_pattern = re.compile(r'(https?://[^\s]+)')
+    return url_pattern.sub(r'<a href="\1">\1</a>', texto)
 
 class WizardNoticias(tk.Tk):
     def __init__(self):
@@ -27,13 +31,22 @@ class WizardNoticias(tk.Tk):
             "titulo": "",
             "mensaje": "",
             "items": [],
+            "imagen_arriba": "",
             "imagen": "",
             "fecha": ""  # se setea al previsualizar/subir
         }
 
+        # Asegurar directorios necesarios
+        os.makedirs("data", exist_ok=True)
+        os.makedirs("data/img", exist_ok=True)
+
         # Contenedor principal para cambiar pantallas
         self.container = tk.Frame(self)
         self.container.pack(fill=tk.BOTH, expand=True)
+        # Aunque el contenedor está con pack, configuramos su grid interno para que los frames hijos
+        # (gestionados con grid) se expanda correctamente.
+        self.container.grid_rowconfigure(0, weight=1)
+        self.container.grid_columnconfigure(0, weight=1)
 
         # Construir pantallas
         self.frames = {}
@@ -59,6 +72,7 @@ class WizardNoticias(tk.Tk):
             email=self.state["email"],
             mensaje=self.state["mensaje"],
             items=self.state["items"],
+            imagen_arriba=self.state["imagen_arriba"],
             imagen=self.state["imagen"],
             fecha=self.state["fecha"]
         )
@@ -99,6 +113,7 @@ class WizardNoticias(tk.Tk):
         # Guardar preview temporal y abrir en navegador con ruta absoluta
         html = self.render_html()
         try:
+            os.makedirs("data", exist_ok=True)
             with open("data/preview.html", "w", encoding="utf-8") as f:
                 f.write(html)
             ruta = os.path.abspath("data/preview.html")
@@ -113,9 +128,11 @@ class BaseStep(tk.Frame):
         super().__init__(parent)
         self.controller = controller
 
+        # Contenido del paso
         self.content = tk.Frame(self)
         self.content.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 
+        # Barra de navegación
         self.nav = tk.Frame(self)
         self.nav.pack(fill=tk.X, padx=20, pady=10)
 
@@ -124,6 +141,10 @@ class BaseStep(tk.Frame):
 
         self.btn_next = tk.Button(self.nav, text="Siguiente", command=self.on_next)
         self.btn_next.pack(side=tk.RIGHT)
+
+        # Si quieres que los botones también se expandan horizontalmente:
+        # self.btn_back.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        # self.btn_next.pack(side=tk.RIGHT, fill=tk.X, expand=True)
 
     def on_back(self):
         pass
@@ -139,15 +160,18 @@ class PasoDatos(BaseStep):
         tk.Label(self.content, text="Datos del autor", font=("Segoe UI", 14, "bold")).pack(anchor="w", pady=(0, 10))
 
         form = tk.Frame(self.content)
-        form.pack(anchor="w", fill=tk.X)
+        form.pack(anchor="w", fill=tk.BOTH, expand=True)
 
         tk.Label(form, text="Nombre:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
-        self.entry_nombre = tk.Entry(form, width=40)
-        self.entry_nombre.grid(row=0, column=1, sticky="w", padx=5, pady=5)
+        self.entry_nombre = tk.Entry(form)
+        self.entry_nombre.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
 
         tk.Label(form, text="Email:").grid(row=1, column=0, sticky="w", padx=5, pady=5)
-        self.entry_email = tk.Entry(form, width=40)
-        self.entry_email.grid(row=1, column=1, sticky="w", padx=5, pady=5)
+        self.entry_email = tk.Entry(form)
+        self.entry_email.grid(row=1, column=1, sticky="ew", padx=5, pady=5)
+
+        # Expansión horizontal de la columna de entradas
+        form.grid_columnconfigure(1, weight=1)
 
         # Inicializar si vuelve atrás
         self.entry_nombre.insert(0, controller.state["nombre"])
@@ -174,11 +198,13 @@ class PasoTitulo(BaseStep):
         tk.Label(self.content, text="Título de la noticia", font=("Segoe UI", 14, "bold")).pack(anchor="w", pady=(0, 10))
 
         form = tk.Frame(self.content)
-        form.pack(anchor="w", fill=tk.X)
+        form.pack(anchor="w", fill=tk.BOTH, expand=True)
 
         tk.Label(form, text="Título:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
-        self.entry_titulo = tk.Entry(form, width=60)
-        self.entry_titulo.grid(row=0, column=1, sticky="w", padx=5, pady=5)
+        self.entry_titulo = tk.Entry(form)
+        self.entry_titulo.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
+
+        form.grid_columnconfigure(1, weight=1)
 
         self.entry_titulo.insert(0, controller.state["titulo"])
 
@@ -204,19 +230,20 @@ class PasoMensaje(BaseStep):
         form.pack(anchor="w", fill=tk.BOTH, expand=True)
 
         tk.Label(form, text="Mensaje:").grid(row=0, column=0, sticky="nw", padx=5, pady=5)
-        self.text_mensaje = tk.Text(form, width=70, height=12)
+        self.text_mensaje = tk.Text(form)
         self.text_mensaje.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
 
         tk.Label(form, text="Items (separados por coma):").grid(row=1, column=0, sticky="w", padx=5, pady=5)
-        self.entry_items = tk.Entry(form, width=60)
-        self.entry_items.grid(row=1, column=1, sticky="w", padx=5, pady=5)
+        self.entry_items = tk.Entry(form)
+        self.entry_items.grid(row=1, column=1, sticky="ew", padx=5, pady=5)
+
+        # La fila 0 (Text) crece en ambas direcciones; la columna 1 (entradas) se expande
+        form.grid_rowconfigure(0, weight=1)
+        form.grid_columnconfigure(1, weight=1)
 
         # Inicializar si vuelve atrás
         self.text_mensaje.insert("1.0", controller.state["mensaje"])
         self.entry_items.insert(0, ",".join(controller.state["items"]))
-
-        form.grid_rowconfigure(0, weight=1)
-        form.grid_columnconfigure(1, weight=1)
 
     def on_back(self):
         self.controller.show_frame("PasoTitulo")
@@ -224,12 +251,12 @@ class PasoMensaje(BaseStep):
     def on_next(self):
         mensaje = self.text_mensaje.get("1.0", tk.END).strip()
         items_raw = self.entry_items.get().strip()
-        items = [i.strip() for i in items_raw.split(",") if i.strip()] if items_raw else []
+        items = [convertir_links(i.strip()) for i in items_raw.split(",") if i.strip()] if items_raw else []
 
         if not mensaje:
             messagebox.showwarning("Falta información", "El mensaje es obligatorio.")
         else:
-            self.controller.state["mensaje"] = mensaje
+            self.controller.state["mensaje"] = convertir_links(mensaje)
             self.controller.state["items"] = items
             self.controller.show_frame("PasoImagen")
 
@@ -238,44 +265,64 @@ class PasoImagen(BaseStep):
     def __init__(self, parent, controller):
         super().__init__(parent, controller)
 
-        tk.Label(self.content, text="Imagen de la noticia", font=("Segoe UI", 14, "bold")).pack(anchor="w", pady=(0, 10))
+        tk.Label(self.content, text="Imagen superior (encima del título)", font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(0, 5))
+        form1 = tk.Frame(self.content)
+        form1.pack(anchor="w", fill=tk.X)  # horizontal
+        tk.Label(form1, text="Archivo:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
+        self.entry_imagen_arriba = tk.Entry(form1)
+        self.entry_imagen_arriba.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
+        tk.Button(form1, text="Seleccionar...", command=self.select_image_arriba).grid(row=0, column=2, sticky="w", padx=5, pady=5)
+        form1.grid_columnconfigure(1, weight=1)
 
-        form = tk.Frame(self.content)
-        form.pack(anchor="w", fill=tk.X)
-
-        tk.Label(form, text="Ruta de imagen:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
-        self.entry_imagen = tk.Entry(form, width=50)
-        self.entry_imagen.grid(row=0, column=1, sticky="w", padx=5, pady=5)
-
-        self.btn_sel = tk.Button(form, text="Seleccionar...", command=self.select_image)
-        self.btn_sel.grid(row=0, column=2, sticky="w", padx=5, pady=5)
+        tk.Label(self.content, text="Imagen inferior (debajo del mensaje)", font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(10, 5))
+        form2 = tk.Frame(self.content)
+        form2.pack(anchor="w", fill=tk.X)  # horizontal
+        tk.Label(form2, text="Archivo:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
+        self.entry_imagen = tk.Entry(form2)
+        self.entry_imagen.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
+        tk.Button(form2, text="Seleccionar...", command=self.select_image).grid(row=0, column=2, sticky="w", padx=5, pady=5)
+        form2.grid_columnconfigure(1, weight=1)
 
         # Inicializar si vuelve atrás
+        self.entry_imagen_arriba.insert(0, controller.state["imagen_arriba"])
         self.entry_imagen.insert(0, controller.state["imagen"])
 
-        note = tk.Label(self.content, text="Sugerencia: usa imágenes .png/.jpg/.jpeg/.gif; deja el campo vacío si no quieres incluir imagen.")
-        note.pack(anchor="w", pady=(10, 0))
-
-    def select_image(self):
-        ruta = filedialog.askopenfilename(
-            title="Seleccionar imagen",
-            filetypes=[("Archivos de imagen", "*.png;*.jpg;*.jpeg;*.gif")]
-        )
+    def select_image_arriba(self):
+        ruta = filedialog.askopenfilename(filetypes=[("Archivos de imagen", "*.png;*.jpg;*.jpeg;*.gif")])
         if ruta:
-            self.entry_imagen.delete(0, tk.END)
-            self.entry_imagen.insert(0, ruta)
-
+            os.makedirs("data/img", exist_ok=True)
             nombre = os.path.basename(ruta)
             nueva_ruta = os.path.join("data/img", nombre)
-            shutil.copy(ruta, nueva_ruta)
+            try:
+                shutil.copy(ruta, nueva_ruta)
+            except Exception as e:
+                messagebox.showerror("Error", f"No se pudo copiar la imagen:\n{e}")
+                return
+            self.entry_imagen_arriba.delete(0, tk.END)
+            self.entry_imagen_arriba.insert(0, nombre)
+            self.controller.state["imagen_arriba"] = nombre
 
+    def select_image(self):
+        ruta = filedialog.askopenfilename(filetypes=[("Archivos de imagen", "*.png;*.jpg;*.jpeg;*.gif")])
+        if ruta:
+            os.makedirs("data/img", exist_ok=True)
+            nombre = os.path.basename(ruta)
+            nueva_ruta = os.path.join("data/img", nombre)
+            try:
+                shutil.copy(ruta, nueva_ruta)
+            except Exception as e:
+                messagebox.showerror("Error", f"No se pudo copiar la imagen:\n{e}")
+                return
+            self.entry_imagen.delete(0, tk.END)
+            self.entry_imagen.insert(0, nombre)
+            self.controller.state["imagen"] = nombre
 
     def on_back(self):
         self.controller.show_frame("PasoMensaje")
 
     def on_next(self):
+        self.controller.state["imagen_arriba"] = self.entry_imagen_arriba.get().strip()
         self.controller.state["imagen"] = self.entry_imagen.get().strip()
-        # Preparar previsualización
         self.controller.preview_in_app()
         self.controller.show_frame("PasoPreview")
 
@@ -287,18 +334,25 @@ class PasoPreview(BaseStep):
         tk.Label(self.content, text="Previsualización", font=("Segoe UI", 14, "bold")).pack(anchor="w", pady=(0, 10))
 
         # Área de previsualización: muestra el HTML renderizado como texto
-        self.preview_text = tk.Text(self.content, wrap="word")
-        self.preview_text.pack(fill=tk.BOTH, expand=True)
+        preview_container = tk.Frame(self.content)
+        preview_container.pack(fill=tk.BOTH, expand=True)
 
-        # Acciones extra
+        self.preview_text = tk.Text(preview_container, wrap="word")
+        self.preview_text.grid(row=0, column=0, sticky="nsew")
+
+        # Barra de acciones
         actions = tk.Frame(self.content)
         actions.pack(fill=tk.X, pady=8)
-        tk.Button(actions, text="Abrir en navegador", command=self.controller.open_preview_in_browser).pack(side=tk.LEFT)
+        tk.Button(actions, text="Abrir en navegador", command=controller.open_preview_in_browser).pack(side=tk.LEFT)
         tk.Label(actions, text="(Se abrirá un archivo temporal llamado preview.html)").pack(side=tk.LEFT, padx=10)
+
+        # Configurar expansión del área de texto
+        preview_container.grid_rowconfigure(0, weight=1)
+        preview_container.grid_columnconfigure(0, weight=1)
 
         # Cambiar el botón principal a "Subir"
         self.btn_next.config(text="Subir")
-        
+
     def set_preview(self, html):
         self.preview_text.delete("1.0", tk.END)
         self.preview_text.insert(tk.END, html)
@@ -309,7 +363,6 @@ class PasoPreview(BaseStep):
     def on_next(self):
         # Subir: guardar JSON y generar output.html
         self.controller.save_json_and_generate()
-        
 
 
 if __name__ == "__main__":

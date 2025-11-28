@@ -41,23 +41,38 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ titulo }}</h1>
 
         <div class="info">
             <p><strong>Nombre:</strong> {{ nombre }}</p>
             <p><strong>Email:</strong> {{ email }}</p>
             <p><strong>Fecha:</strong> {{ fecha }}</p>
         </div>
+        
+        {% if imagen_arriba %}
+        <div class="imagen">
+            <img src="img/{{ imagen_arriba }}" alt="Imagen superior" style="max-width:100%; border-radius:8px;">
+        </div>
+        {% endif %}
 
-        <h2>Mensaje</h2>
+        <h1>{{ titulo }}</h1>
+
         <p>{{ mensaje }}</p>
 
+
+        {% if imagen %}
+        <div class="imagen">
+            <img src="img/{{ imagen }}" alt="Imagen del mensaje" style="max-width:100%; border-radius:8px;">
+        </div>
+        {% endif %}
+
+        {% if items %}
         <h2>Lista de elementos</h2>
         <ul class="items">
             {% for item in items %}
             <li>{{ item }}</li>
             {% endfor %}
         </ul>
+        {% endif %}
     </div>
 </body>
 </html>
