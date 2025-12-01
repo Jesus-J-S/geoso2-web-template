@@ -43,8 +43,6 @@ class WizardNoticias(tk.Tk):
         # Contenedor principal para cambiar pantallas
         self.container = tk.Frame(self)
         self.container.pack(fill=tk.BOTH, expand=True)
-        # Aunque el contenedor está con pack, configuramos su grid interno para que los frames hijos
-        # (gestionados con grid) se expanda correctamente.
         self.container.grid_rowconfigure(0, weight=1)
         self.container.grid_columnconfigure(0, weight=1)
 
@@ -142,9 +140,6 @@ class BaseStep(tk.Frame):
         self.btn_next = tk.Button(self.nav, text="Siguiente", command=self.on_next)
         self.btn_next.pack(side=tk.RIGHT)
 
-        # Si quieres que los botones también se expandan horizontalmente:
-        # self.btn_back.pack(side=tk.LEFT, fill=tk.X, expand=True)
-        # self.btn_next.pack(side=tk.RIGHT, fill=tk.X, expand=True)
 
     def on_back(self):
         pass
