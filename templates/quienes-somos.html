@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos - GEOSO2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container mt-4 ps-0 ms-4">
+
+    <img src="../imagenes/quienes-somos/imagen_01.png" alt="desarrollo sostenible" width="300" height="300">
+
+    <h4><strong><u>¿Quiénes Somos?</u></strong></h4>
+    <p>
+      Somos un grupo interdisciplinar de investigadores que trabajamos con un enfoque holístico, geoespacial y social,
+      usando métodos, técnicas y tecnologías de: GIS, Remote Sensing, Series tiempo, Big Data, encuestas, Artificial
+      Intelligence, etc. para monitorear, analizar, modelar y simular nuestro entorno, con el objetivo de promover un
+      desarrollo sostenible.
+    </p>
+
+    <h4><strong><u>¿Qué hacemos?</u></strong></h4>
+    <p>Monitorear, analizar, modelizar y simular.</p>
+
+    <h4><strong><u>Dónde lo hacemos?</u></strong></h4>
+    <p>En nuestro entorno, formado por los medios ambiental, social y económico.</p>
+
+    <h4><strong><u>¿Cómo lo hacemos?</u></strong></h4>
+    <p>Utilizando enfoque holístico con especial énfasis geoespacial y social.</p>
+
+    <h4><strong><u>¿Con qué lo hacemos?</u></strong></h4>
+    <p>
+      Aplicando herramientas de geomática, simulación y metodologías estadísticas: GIS, Big Data, Remote Sensing,
+      Artificial Intelligence, encuestas, series de tiempo, etc.
+    </p>
+
+    <h4><strong><u>¿Para qué lo hacemos?</u></strong></h4>
+    <p>Promover un desarrollo sostenible.</p>
+  </main>
+
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data)
+      .catch(err => console.error("Error cargando navbar:", err));
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

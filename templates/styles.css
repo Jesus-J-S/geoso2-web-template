@@ -1,4 +1,8 @@
-/* Logo y marca */
+body {
+  background-color: rgb(74, 81, 101);
+  color: white;
+}
+
 .navbar-logo {
   height: 30px;
 }
