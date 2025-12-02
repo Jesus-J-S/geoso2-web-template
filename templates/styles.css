@@ -1,0 +1,88 @@
+/* Logo y marca */
+.navbar-logo {
+  height: 30px;
+}
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+  color: rgba(255,255,255,.55);
+  margin-right: 50px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.nav-link:hover {
+  color: #fff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+
+/* Texto adicional */
+.research-group-text {
+  color: rgba(255,255,255,.55);
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+/* Contenedor del buscador fuera del navbar: igual que bg-dark y ancho completo */
+.search-container {
+  background-color: #212529;   /* mismo color que navbar bg-dark */
+  width: 100%;                 /* ocupa todo el ancho */
+  border-top: 1px solid rgba(255,255,255,.1); /* sutil separación */
+}
+
+/* Form animado: despliegue vertical suave a ancho completo */
+.search-form {
+  width: 100%;
+  display: flex;               /* para que el input pueda usar flex:1 */
+  max-height: 0;               /* ANIMACIÓN VERTICAL */
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+.search-form.active {
+  max-height: 80px;            /* altura suficiente para el input */
+  opacity: 1;
+}
+
+/* Input ocupa todo el ancho y mantiene estética oscura */
+.search-input {
+  flex: 1;
+  background-color: #2a2f34;
+  border-color: #2a2f34;
+  color: #fff;
+  margin: 0.5rem 0.75rem;      /* respiración lateral */
+}
+.search-input::placeholder {
+  color: rgba(255,255,255,.55);
+}
+.search-input:focus {
+  background-color: #2a2f34;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(25,135,84,.25);
+  border-color: rgba(255,255,255,.75);       /* success */
+}
+
+/* Icono lupa dentro del navbar */
+.search-icon {
+  color: rgba(255,255,255,.55);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.search-icon:hover {
+  color: #fff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}

@@ -28,3 +28,5 @@ Thumbs.db
 
 # Project specific
 output.html
+data/
+output/
