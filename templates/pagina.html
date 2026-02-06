@@ -1,0 +1,58 @@
+{% extends "index_base.html" %}
+
+{% block title %}
+  {{ pagina.titulo }}
+{% endblock %}
+
+{% block content %}
+
+<div class="mx-3 mt-4">
+
+  <!-- TÍTULO -->
+  <h2 class="text-center">
+    <strong>{{ pagina.titulo }}</strong>
+  </h2>
+
+  <!-- AUTOR Y FECHA -->
+  <p class="text-center" style="font-weight:200;">
+    {{ pagina.autor }} — {{ pagina.fecha }}
+  </p>
+
+  <!-- PORTADA -->
+  {% if pagina.portada %}
+  <div class="container my-4 text-center">
+    <img src="{{ pagina.portada }}" alt="Portada" class="img-marco2" style="max-width: 600px;">
+  </div>
+  {% endif %}
+
+  <br>
+
+  <!-- CUERPO DE BLOQUES -->
+  {% for bloque in pagina.cuerpo %}
+
+    {% if bloque.texto %}
+      <p>{{ bloque.texto }}</p>
+    {% endif %}
+
+    {% if bloque.imagen %}
+      <div class="container my-4 text-center">
+        <img src="{{ bloque.imagen }}" alt="Imagen" class="img-marco2" style="max-width: 800px;">
+        {% if bloque.pie_imagen %}
+          <p style="text-align:center; font-weight:200">{{ bloque.pie_imagen }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if bloque.enlace and bloque.texto_enlace %}
+      <p class="text-center">
+        <a href="{{ bloque.enlace }}" target="_blank" style="text-decoration:none;">
+          {{ bloque.texto_enlace }}
+        </a>
+      </p>
+    {% endif %}
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}

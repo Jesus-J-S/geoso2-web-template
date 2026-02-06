@@ -1,0 +1,56 @@
+{% extends "index_base.html" %}
+
+{% block title %}Participa{% endblock %}
+
+{% block content %}
+{% for item in participa %}
+<div class="container my-4">
+  <div class="row align-items-center">
+
+    <!-- Imagen -->
+    <div class="col-md-4 text-center imagenizq-texto">
+      {% if item.link %}
+        <a href="{{ item.link }}" target="_blank">
+          <img src="{{ item.imagen }}" style="width:300px">
+        </a>
+      {% else %}
+        <img src="{{ item.imagen }}" style="width:300px">
+      {% endif %}
+    </div>
+
+    <!-- Texto -->
+    <div class="col-md-8">
+
+      <h4 class="titulos mb-2">
+        {% if item.link %}
+          <a href="{{ item.link }}" class="link-reset" target="_blank">
+            {{ item.titulo }}
+          </a>
+        {% else %}
+          {{ item.titulo }}
+        {% endif %}
+      </h4>
+
+      <p>{{ item.descripcion }}</p>
+
+      {% if item.link %}
+        <a href="{{ item.link }}" class="btn btn-primary mt-2" target="_blank">
+          Leer más
+        </a>
+      {% else %}
+        <span class="btn btn-secondary disabled mt-2">
+          Sin enlace
+        </span>
+      {% endif %}
+
+    </div>
+
+  </div>
+</div>
+
+{% if not loop.last %}
+<hr>
+{% endif %}
+
+{% endfor %}
+{% endblock %}

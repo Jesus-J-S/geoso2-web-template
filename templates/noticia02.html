@@ -1,0 +1,53 @@
+{% extends "index_base.html" %}
+
+{% block title %}GEOSO2 y la Cooperación Internacional{% endblock %}
+
+{% block content %}
+
+{% set n = noticia02 %}
+
+<div class="mx-3 mt-4">
+
+  <h2 style="text-align:center;">
+    {{ n.titulo or "" }}
+  </h2>
+
+  {% if n.fecha %}
+    <p style="text-align:center; font-weight:200">
+      Fecha: {{ n.fecha }}
+    </p>
+  {% endif %}
+
+  <br>
+
+  {# PÁRRAFOS #}
+  {% for parrafo in n.parrafos or [] %}
+    <p>{{ parrafo or "" }}</p>
+    <br>
+  {% endfor %}
+
+  <div class="container my-4">
+    <div class="row text-center align-items-center">
+
+      {# IMÁGENES #}
+      {% for img in n.imagenes or [] %}
+      <div class="col">
+
+        <img src="{{ img.src or '../imput/img/default.png' }}"
+             width="400"
+             height="300"
+             alt="{{ img.alt or '' }}">
+
+        <p style="text-align:center; font-weight:200">
+          {{ img.pie or "" }}
+        </p>
+
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

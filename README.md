@@ -1,148 +1,204 @@
-# Template HTML con Jinja2
+# GEOSO2 Web Template Editor
 
-Prueba de concepto para modificar templates HTML usando Python y Jinja2.
+Aplicación de escritorio desarrollada en **Python + Tkinter** para gestionar y generar de forma visual el sitio web de GEOSO2.  
+Permite editar contenido, gestionar imágenes y documentos, mantener un historial de cambios y generar automáticamente los archivos HTML finales mediante **plantillas Jinja2**.
 
-cambio hecho por jesus
+Este proyecto está diseñado para facilitar la edición del sitio sin necesidad de modificar manualmente archivos HTML, CSS o JSON.
 
-## Estructura del proyecto
+---
 
-```
-.
-├── venv/                  # Entorno virtual de Python
-├── template.html          # Template HTML con sintaxis Jinja2
-├── datos.json            # Archivo JSON con los datos del template
-├── modify_template.py     # Script Python para procesar el template
-├── output.html           # HTML generado (se crea al ejecutar el script)
-└── README.md             # Este archivo
-```
+## Características principales
 
-## Requisitos
+- **Interfaz gráfica completa** creada con Tkinter.
+- **Edición visual del contenido** almacenado en `json/web.json`.
+- **Gestión automática de imágenes y documentos**, copiándolos a la carpeta correcta.
+- **Historial global de cambios** por sección.
+- **Generación automática del sitio web** usando plantillas Jinja2.
+- **Sistema de copias de seguridad** (exportar/importar JSON).
+- **Plantillas HTML personalizables** en la carpeta `templates/`.
+- **Salida final del sitio** en la carpeta `output/`.
+- **CSS único** para todo el sitio (`css/style.css`).
 
-- Python 3.x
-- Jinja2 (instalado en el entorno virtual)
+---
 
-## Instalación
+# Estructura del proyecto
 
-El entorno virtual ya está configurado con Jinja2 instalado. Si necesitas recrearlo:
 
-```bash
-# Crear entorno virtual
-python3 -m venv venv
+geoso2-web-template/
+│
+├── css/
+│   └── style.css
+│
+├── json/
+│   └── web.json
+│
+├── imput/
+│   ├── img/
+│   │   
+│   ├── docs/
+│   │   
+│   └── logos/
+│
+├── templates/
+│   ├── index_page.html
+│   ├── carrusel.html
+│   ├── noticias.html
+│   ├── agenda.html
+│   ├── proyectos.html
+│   ├── publicaciones.html
+│   ├── quienes_somos.html
+│   ├── rafagas.html
+│   ├── entidades.html
+│   ├── participa.html
+│   └── pagina.html
+│
+├── output/
+│   └── (HTML generados automáticamente)
+│
+├── interfaz_ventana_principal.py
+├── interfaz_carrusel.py
+├── interfaz_noticias.py
+├── interfaz_agenda.py
+├── interfaz_entidades_colaboradoras.py
+├── interfaz_quienessomos.py
+├── interfaz_pagina_web.py
+├── interfaz_publicaciones.py
+├── interfaz_rafagas.py
+├── interfaz_proyectos.py
+└── interfaz_participa.py
 
-# Activar entorno virtual
-source venv/bin/activate  # En Linux/Mac
-# o
-venv\Scripts\activate     # En Windows
 
-# Instalar Jinja2
-pip install jinja2
-```
+# Cómo ejecutar el proyecto
 
-### Gestión de dependencias con pip freeze
+1. Instalar dependencias:
 
-Para exportar las dependencias instaladas a un archivo `requirements.txt`:
+"```bash"
+pip install jinja2 pillow
 
-```bash
-# Activar el entorno virtual
-source venv/bin/activate  # En Linux/Mac
-# o
-venv\Scripts\activate     # En Windows
+# Ejecutar la aplicación principal
 
-# Exportar dependencias
-pip freeze > requirements.txt
-```
+python interfaz_ventana_principal.py
 
-Para instalar las dependencias desde `requirements.txt` en otro entorno:
+# interfaz principal
 
-```bash
-# Activar el entorno virtual
-source venv/bin/activate
+La ventana principal ofrece acceso a todas las funciones del sistema:
+Editar sitio web  
+Abre un menú donde puedes seleccionar qué sección editar.
+Historial de cambios  
+Muestra todos los cambios registrados en cualquier sección.
+Generar sitio web  
+Renderiza todas las plantillas Jinja2 usando web.json y genera los HTML en output/.
+Exportar copia de seguridad  
+Guarda una copia del JSON actual.
+Importar copia de seguridad  
+Restaura un JSON previamente exportado.
+Manual de ayuda PDF
+Instrucciones.
 
-# Instalar dependencias desde el archivo
-pip install -r requirements.txt
-```
 
-Esto es útil para compartir el proyecto con otros desarrolladores o desplegar en diferentes entornos.
+# Cómo funciona el sistema de edición
 
-## Cómo usar
+Cada sección del sitio tiene su propio editor independiente, pero todos comparten la misma lógica:
+Cargan el archivo json/web.json.
+Editan únicamente la parte correspondiente a su sección.
+Guardan los cambios en el JSON.
+Registran un historial interno dentro de su sección.
+Gestionan imágenes y documentos copiándolos a imput/.
+Secciones disponibles
+Carrusel
+Noticias
+Agenda
+Entidades colaboradoras
+Ráfagas
+Proyectos
+Quiénes somos
+Publicaciones
+Participa
+Páginas web individuales
+Cada editor está implementado en un archivo .py independiente.
 
-### Ejecución básica
+# Gestión de imágenes y documentos
 
-```bash
-./venv/bin/python modify_template.py
-```
+Todas las imágenes y documentos seleccionados por el usuario se copian automáticamente a la carpeta imput.
+Los editores generan rutas relativas para que el sitio web funcione correctamente al exportarse.
 
-O si tienes el entorno virtual activado:
+# Estructura del archivo web.json
 
-```bash
-python modify_template.py
-```
+El archivo json/web.json contiene toda la información editable del sitio y Cada editor modifica únicamente su sección correspondiente.
 
-### Visualizar el resultado
+# Historial de cambios
 
-Abre el archivo `output.html` generado en tu navegador web.
+Cada sección mantiene un historial interno.
+La ventana principal permite ver todo el historial global y limpiarlo.
 
-## Características implementadas
+# Generación del sitio web
 
-### Variables simples
+Cuando el usuario pulsa Generar sitio web, ocurre lo siguiente:
+Se carga json/web.json.
+Se inicializa Jinja2 con las plantillas de templates/.
+Se renderiza cada plantilla con los datos del JSON.
+Se generan los archivos HTML en output/.
+Se abre automáticamente output/index.html en el navegador.
 
-El template soporta variables que se reemplazan con valores reales:
+Ejemplo de renderizado:
 
-- `{{ titulo }}` - Título de la página
-- `{{ nombre }}` - Nombre del usuario
-- `{{ email }}` - Email del usuario
-- `{{ fecha }}` - Fecha de generación (automática)
-- `{{ mensaje }}` - Mensaje personalizado
+template = env.get_template("index_page.html")
+html = template.render(index_page=web["index_page"])
 
-### Bucles (iteración)
+# CSS
 
-Puedes generar listas dinámicamente usando bucles:
+Todos los html usan el archivo css/style.css para el diseño de la página
 
-```html
-{% for item in items %}
-<li>{{ item }}</li>
-{% endfor %}
-```
+# Copias de seguridad
 
-### Estilos CSS incluidos
+Exportar copia:
+Guarda el JSON actual en un archivo .json.
 
-El template incluye estilos CSS básicos con:
-- Diseño responsivo
-- Tarjetas con sombras
-- Colores y espaciado profesional
+Importar copia:
+Sobrescribe json/web.json con el archivo seleccionado.
 
-## Personalización
+# Plantillas HTML
 
-Los datos del template se encuentran en el archivo `datos.json`. Para personalizarlos, edita este archivo:
+Las plantillas están en la carpeta: templates/
 
-```json
-{
-    "titulo": "Tu título aquí",
-    "nombre": "Tu nombre",
-    "email": "tu@email.com",
-    "mensaje": "Tu mensaje personalizado",
-    "items": [
-        "Item 1",
-        "Item 2",
-        "Item 3"
-    ]
-}
-```
+Cada plantilla corresponde a una sección del sitio.
+Puedes modificarlas libremente para cambiar el diseño del sitio web.
 
-**Nota:** El campo `fecha` se genera automáticamente al ejecutar el script, no es necesario incluirlo en el JSON.
+## Cómo añadir una nueva sección al editor
 
-Después de modificar `datos.json`, ejecuta nuevamente el script para regenerar `output.html`:
+1. Crear un nuevo archivo `interfaz_nueva_seccion.py` siguiendo la estructura de los demás editores.
+2. Añadir un botón en `interfaz_ventana_principal.py` dentro del menú de secciones.
+3. Añadir la lógica de carga/guardado en `web.json` dentro de la clave correspondiente.
+4. Crear una plantilla HTML en `templates/nueva_seccion.html`.
+5. Añadir el renderizado en la función `generar_sitio_web()`.
 
-```bash
-./venv/bin/python modify_template.py
-```
+Todas las secciones existentes pueden usarse como ejemplo.
 
-## Extender el template
+## Cómo crear el ejecutable
 
-Puedes añadir más variables o estructuras Jinja2 al template:
+Para crear el ejecutable necesitas tener installado pyinstaller, para descargarlo abre terminal o cmd y escribe:
+pip install pyinstaller
+y una vez instalado sigue el siguiente paso.
 
-- **Condicionales**: `{% if condicion %}...{% endif %}`
-- **Filtros**: `{{ variable|upper }}`, `{{ variable|length }}`
-- **Comentarios**: `{# Este es un comentario #}`
+# En IOS:
 
-Para más información sobre Jinja2: https://jinja.palletsprojects.com/
+1. una vez modificado eso nos diriguimos a "terminal" en nuestro dispositivo
+
+2. Debemos diriguirnos a la carpeta raiz de nuestro proyecto, en este caso es new-geoso2 : "cd new-geoso2"
+
+3. Escribimos lo siguiente:
+pyinstaller --noconsole --onedir --add-data "geoso2-web-template:geoso2-web-template" geoso2-web-template/interfaz_ventana_principal.py
+
+4. Se abrá creado en geoso2-web-template una carpeta llamada "dist" y dentro esta el ejecutable interfaz_ventana_principal que puedes ya mover a donde quieras
+
+# En Windows:
+
+1. Hacer doble clic en el archivo llamado Crear aplicación.bat que esta dentro del repositorio.
+
+2. Se abrá creado en el escirtorio una carpeta llamada "GEOSO2" y dentro esta el ejecutable Editor GEOSO".exe y la carpeta Geoso2-web-template donde se encuentran todos los ficheros de la aplicación.
+
+## Autor
+
+Jesús Jaén Santana  
+Versión del editor: 2.0 / 2026
+

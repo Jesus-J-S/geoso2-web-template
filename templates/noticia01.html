@@ -1,0 +1,82 @@
+{% extends "index_base.html" %}
+
+{% block title %}GEOSO2 y la Cooperación Internacional{% endblock %}
+
+{% block content %}
+
+{% set n = noticias.detalles.noticia01 %}
+
+<div class="mx-3 mt-4">
+  <h2 style="text-align: center;"><strong>{{ n.titulo or "" }}</strong></h2>
+
+  {% if n.fecha %}
+    <p style="text-align:center; font-weight:200">
+      Fecha: {{ n.fecha }}
+    </p>
+  {% endif %}
+
+  <br>
+</div>
+
+{# PÁRRAFOS 1 #}
+{% for parrafo in n.parrafos or [] %}
+  <p>{{ parrafo.texto1 or "" }}</p>
+{% endfor %}
+
+{# IMÁGENES 1 #}
+{% for img in n.imagenes or [] %}
+  <div class="container my-4 text-center">
+    <img src="{{ img.src1 or '../imput/img/default.png' }}"
+         alt="{{ img.alt1 or '' }}"
+         class="img-marco2">
+    <p style="text-align:center; font-weight:200">{{ img.pie or "" }}</p>
+  </div>
+{% endfor %}
+
+<p>
+  Durante la visita se han debatido varios temas de colaboración entre ambos equipos de trabajo como:
+  detección remota aplicada a deforestación, inundaciones y cambios en el uso del suelo, desarrollo,
+  transformación y comercialización de productos forestales no leñosos, monitorización de productos
+  forestales leñosos etc.
+</p>
+
+<p>
+  Esta visita se enmarca en las actividades a desarrollar por el proyecto GEOCOOP, Acción Semilla
+  financiada por la UPM en su programa de cooperación internacional. Dicho proyecto titulado
+  “Metodología colaborativa para el desarrollo de acciones de cooperación internacional. Aplicación a la
+  mejora del acceso a agua de calidad para la población Baka del Sur de Camerún”, llevará a cabo
+  acciones sobre el terreno que mejoren el acceso al agua de las poblaciones baka, y analizará aspectos
+  del entorno ambiental y socioeconómico en el que vive dicha población para ayudar a la ONGD
+  <a style="text-decoration: none;" href="https://zercaylejos.org/">Zerca y Lejos</a>
+  mediante diagnóstico y análisis la situación, a plantear áreas temáticas en las que desarrollar sus
+  proyectos y criterios para la priorización de los mismos.
+</p>
+
+{# IMÁGENES 2 #}
+{% for img in n.imagenes or [] %}
+  <div class="container my-4 text-center">
+    <img src="{{ img.src2 or '../imput/img/default.png' }}"
+         alt="{{ img.alt2 or '' }}"
+         class="img-marco2"
+         width="800px">
+    <p style="text-align:center; font-weight:200">{{ img.pie2 or "" }}</p>
+  </div>
+{% endfor %}
+
+{# PÁRRAFOS 2 #}
+{% for parrafo in n.parrafos or [] %}
+  <p>{{ parrafo.texto4 or "" }}</p>
+{% endfor %}
+
+{# IMÁGENES 3 #}
+{% for img in n.imagenes or [] %}
+  <div class="container my-4 text-center">
+    <img src="{{ img.src3 or '../imput/img/default.png' }}"
+         alt="{{ img.alt3 or '' }}"
+         class="img-marco2"
+         width="800px">
+    <p style="text-align:center; font-weight:200">{{ img.pie3 or "" }}</p>
+  </div>
+{% endfor %}
+
+{% endblock %}

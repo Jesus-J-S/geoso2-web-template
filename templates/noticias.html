@@ -1,0 +1,95 @@
+{% extends "index_base.html" %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block content %}
+<div class="mx-3 mt-4">
+
+  <hr style="height: 4px; background: #ccc; margin: 16px 0;">
+  <div class="marco2"><h3><strong>Noticias</strong></h3></div>
+  <br><br>
+
+  {% for noticia in noticias %}
+    <div class="imagenizq-texto">
+
+      {# ----------------------------- #}
+      {# IMAGEN (con enlace opcional) #}
+      {# ----------------------------- #}
+
+      {% if noticia.link %}
+        <a href="{{ noticia.link }}" target="_blank">
+          <img src="{{ noticia.imagen }}" class="imagenizq img-marco">
+        </a>
+
+      {% elif noticia.enlace and noticia.enlace.url %}
+        <a href="{{ noticia.enlace.url }}" target="_blank">
+          <img src="{{ noticia.imagen }}" class="imagenizq img-marco">
+        </a>
+
+      {% else %}
+        <img src="{{ noticia.imagen }}" class="imagenizq img-marco">
+      {% endif %}
+
+      <div>
+
+        {# ----------------------------- #}
+        {# TÍTULO (con enlace opcional) #}
+        {# ----------------------------- #}
+
+        <h3 class="titulos">
+          {% if noticia.link %}
+            <a href="{{ noticia.link }}" target="_blank" class="link-reset">
+              {{ noticia.titulo }}
+            </a>
+
+          {% elif noticia.enlace and noticia.enlace.url %}
+            <a href="{{ noticia.enlace.url }}" target="_blank" class="link-reset">
+              {{ noticia.titulo }}
+            </a>
+
+          {% else %}
+            {{ noticia.titulo }}
+          {% endif %}
+        </h3>
+
+        {# ----------------------------- #}
+        {# DESCRIPCIÓN                   #}
+        {# ----------------------------- #}
+
+        <p style="color:rgba(235, 245, 255, 0.775); white-space: pre-line;">
+          {{ noticia.descripcion }}
+        </p>
+
+        {# ----------------------------- #}
+        {# BOTÓN "LEER MÁS"             #}
+        {# ----------------------------- #}
+
+        {% if noticia.link %}
+          <a href="{{ noticia.link }}" class="btn btn-primary mt-2" target="_blank">
+            {{ noticia.link_text or "Leer más" }}
+          </a>
+
+        {% elif noticia.enlace and noticia.enlace.url %}
+          <a href="{{ noticia.enlace.url }}" class="btn btn-primary mt-2" target="_blank">
+            {{ noticia.enlace.texto or "Leer más" }}
+          </a>
+
+        {% else %}
+          <span class="btn btn-secondary disabled mt-2">
+            Sin enlace
+          </span>
+        {% endif %}
+
+        <br><br>
+      </div>
+
+    </div>
+
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+
+  {% endfor %}
+
+</div>
+{% endblock %}

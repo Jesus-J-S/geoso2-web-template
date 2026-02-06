@@ -1,0 +1,881 @@
+{
+    "web": {
+        "index_page": {
+            "carrusel": [
+                {
+                    "imagen": "../imput/img/carrusel/foto1.jpg",
+                    "enlace": "https://12jcm.ingegraf.es/"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto2.png",
+                    "enlace": "../imput/img/carrusel/INTED_2024_ppt.pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto3.png",
+                    "enlace": "../output/rafagas01.html"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto4.jpg",
+                    "enlace": "../imput/img/carrusel/geoso2_eelisa_taller_zyl_2025_v3_pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto5.jpg",
+                    "enlace": "../imput/img/carrusel/GEOSO2_FICHA_INCIO_CARRUSEL_COMUNICACION_CUD24.pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto6.jpg",
+                    "enlace": "GEOSO2_FICHA_INCIO_CARRUSEL_DEFENSATESISCAROLINA_presentacion.pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/img1.png",
+                    "enlace": "https://google.es"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/arbolitos.png",
+                    "enlace": "https://unjardinparami.com/los-arboles-mas-utilizado-en-paisajismo/"
+                }
+            ],
+            "noticias": [
+                {
+                    "imagen": "../imput/img/noticias/img1.png",
+                    "titulo": "prueba para pagina web y para noticias",
+                    "descripcion": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de estas secciones",
+                    "enlace": {
+                        "texto": "saber más",
+                        "url": "pagina_001.html"
+                    }
+                },
+                {
+                    "titulo": "Investigadores y alumnos de la UPM visitan la Universidad de Bertoua en su viaje de campo a poblaciones baka de Camerún.",
+                    "imagen": "../imput/img/noticias/20240907/images/01.jpg",
+                    "descripcion": "Se han reunido con investigadores del Institut superieur d’agriculture, du boit, de l’eau et de l’environnemet, poniendo en común diversas experiencias y actividades en temas como: detección remota aplicada a deforestación, inundaciones y cambios en el uso del suelo, transformación y comercialización de productos forestales no leñosos, etc.",
+                    "link": "noticia01.html",
+                    "link_text": "Leer más"
+                },
+                {
+                    "titulo": "El proyecto Sen4Stat ofrece productos \\\"Earth Observation\\\" EO: prototipo y casos de uso en España.",
+                    "imagen": "../imput/img/noticias/20240223_01.jpg",
+                    "descripcion": "El prototipo español del proyecto Sen4Stat integra datos EO y datos terrestres, y tiene como objetivo reducir los costos de estudio manteniendo la precisión y mejorando la puntualidad de las estimaciones de superficie de cultivo y producción.",
+                    "link": "https://www.esa-sen4stat.org/user-stories/spain-cycle-1-demo/",
+                    "link_text": "Leer más"
+                }
+            ],
+            "agenda": [
+                {
+                    "imagen": "../imput/img/agenda/img1.png",
+                    "titulo": "Prueba",
+                    "descripcion": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de esta sección",
+                    "fecha": "27/01/2026",
+                    "hora": "13:58",
+                    "lugar": "UPM",
+                    "link": "https://geoso2.es",
+                    "texto_link": "Saber más"
+                },
+                {
+                    "titulo": "TALLER: Iniciación a AutoCAD 2D.",
+                    "descripcion": "Con el objetivo de facilitar el acceso a una herramienta de diseño gráfico general y de amplio uso, se ha programado un taller de 6 horas de duración en el que se explicarán algunos conceptos básicos, se darán indicaciones de trabajo con CAD 2D y se aplicará todo lo aprendido. Gratuito para estudiantes E.T.S.I. Montes Forestal y del Medio Natural previa inscripción hasta completar aforo. Otros casos consultar.",
+                    "fecha": "Fecha: lunes 16, 23 y 30 septiembre 2024 Hora: 15:30h",
+                    "lugar": "Lugar: ETSI Montes, Forestal y del Medio Natural. Edif. Forestales. Aula de Proyectos.",
+                    "imagen": "../imput/img/agenda/20240906/01.png",
+                    "link": "https://docs.google.com/forms/d/e/1FAIpQLScW5okR_w5-ntzXSDghb-__urGFhEN4wpPZXVWXQVTrTa12fA/viewform?pli=1",
+                    "texto_link": "Ver detalles"
+                }
+            ],
+            "footer": {
+                "logo_upm": "https://www.geoso2.es/logos/UPM/UPM-Escudo_con_leyenda.svg",
+                "texto": "Grupo de Investigación Geoespacial y Dinámicas Territoriales para la Sostenibilidad",
+                "version": "v.3.0"
+            },
+            "entidades": [
+                {
+                    "imagen": "../imput/img/colaboradores/Original.png",
+                    "enlace": "https://zercaylejos.org/"
+                },
+                {
+                    "imagen": "../imput/img/colaboradores/nediage_logo_black.png",
+                    "enlace": "https://nediage.eu/"
+                },
+                {
+                    "imagen": "../imput/img/colaboradores/left_cape_logo_01.png",
+                    "enlace": "https://www.leftcape.com/"
+                },
+                {
+                    "imagen": "../imput/img/colaboradores/SRM_logo.png",
+                    "enlace": "https://srmconsulting.es/"
+                },
+                {
+                    "imagen": "../imput/img/colaboradores/Altitum_horizontal.png",
+                    "enlace": "https://altitum.com/"
+                }
+            ],
+            "history": [
+                {
+                    "timestamp": "2026-02-02T13:30:45",
+                    "sections_changed": [
+                        "carrusel"
+                    ],
+                    "summary": "Actualización en carrusel"
+                },
+                {
+                    "timestamp": "2026-02-06T12:13:51",
+                    "sections_changed": [
+                        "carrusel"
+                    ],
+                    "summary": "Actualización en carrusel"
+                }
+            ]
+        },
+        "Encabezado": {
+            "carrusel": [
+                {
+                    "imagen": "../imput/img/carrusel/foto1.jpg",
+                    "enlace": "https://12jcm.ingegraf.es/"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto2.png",
+                    "enlace": "../imput/img/carrusel/INTED_2024_ppt.pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto3.png",
+                    "enlace": "../output/rafagas01.html"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto4.jpg",
+                    "enlace": "../imput/img/carrusel/geoso2_eelisa_taller_zyl_2025_v3_pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto5.jpg",
+                    "enlace": "../imput/img/carrusel/GEOSO2_FICHA_INCIO_CARRUSEL_COMUNICACION_CUD24.pdf"
+                },
+                {
+                    "imagen": "../imput/img/carrusel/foto6.jpg",
+                    "enlace": "GEOSO2_FICHA_INCIO_CARRUSEL_DEFENSATESISCAROLINA_presentacion.pdf"
+                }
+            ],
+            "history": []
+        },
+        "pagina1": {
+            "rafagas": [
+                {
+                    "imagen": "../imput/img/rafagas/img1.png",
+                    "titulo": "Prueba",
+                    "descripcion": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de esta sección",
+                    "link": "https://geoso2.es"
+                },
+                {
+                    "link": "rafagas01.html",
+                    "imagen": "../imput/img/rafagas/pagina1/rafagas1_01.jpg",
+                    "titulo": "Impacto positivo de la declaración de parque regional en evolución de la calidad de agua",
+                    "descripcion": "La declaración del Parque Regional del Sureste en 1994 parece haber tenido un impacto positivo en la evolución de la calidad de agua de las lagunas de gravera a lo largo de los años estudiados (1984-2011). Se redujo a la mitad el número de masas de agua hipereutróficas, e incluso, al final del periodo, aparecieron masas de agua oligotróficas. Leer más…"
+                },
+                {
+                    "link": "https://datos1.geoso2.es/spain/bodyWater//",
+                    "imagen": "../imput/img/rafagas/pagina2/rafagas2_01.jpg",
+                    "titulo": "Ejemplo de visor de temperaturas en la España Peninsular (en pruebas)",
+                    "descripcion": "Se trata de un ejemplo de visor para manejar datos ráster en grandes extensiones, en este caso temperaturas medias en la España Peninsular. Los datos que se muestran son ficticios y solo se utilizan para ilustrar la variación de una variable en el espacio."
+                }
+            ],
+            "history": []
+        },
+        "proyectos": {
+            "encurso": [
+                {
+                    "imagen": "../imput/img/proyectos/img1.png",
+                    "titulo": "Prueba",
+                    "link": "https://geoso2.es",
+                    "descripcion": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de esta sección"
+                },
+                {
+                    "titulo": "Visualizador Geoespacial de Datos Medioambientales",
+                    "imagen": "../imput/img/proyectos/images/VGDM/viewer.png",
+                    "link": "https://datos1.geoso2.es/",
+                    "descripcion": "Visualizador geografico especializado en datos medioambientales"
+                },
+                {
+                    "titulo": "Arbolado Autóctono en campos deportivos",
+                    "imagen": "../imput/img/proyectos/images/club/images/01.png",
+                    "link": "../output/club.html",
+                    "descripcion": "Llevamos muchos años (25) comprobando la efectividad de diferentes tratamientos ecológicos fitofortificantes para mejorar las condiciones del arbolado autóctono (encinas) en condiciones antrópicas especiales como campos deportivos. Además, se realiza un apoyo en labores de gestión y mantenimiento a los responsables del club, realizando asesoramiento sobre tratamientos selvícolas, especialmente supervisión de podas y apeos de pies muertos. Para facilitar la gestión de este arbolado, se mantiene una base de datos fitopatológica y de estado vegetal georreferenciada."
+                },
+                {
+                    "titulo": "SIMGEOSEV",
+                    "imagen": "../imput/img/proyectos/images/SIMGEOSEV/SIMGEOSEV.jpg",
+                    "link": "https://blogs.upm.es/simgeosev/",
+                    "descripcion": "SIMGEOSEV es un proyecto de investigación cuyo propósito es el estudio y mejora de las medidas de seguridad en circulación viaria mediante la utilización de tecnologías geoespaciales y simuladores gráficos de conducción. El estudio además estudia aquellos aspectos perceptivos del conductor más significativos y debidos a las distintas modificaciones del entorno circundante y de la geometría y diseño de la infraestructura viaria."
+                },
+                {
+                    "titulo": "Identificando abandono de cultivos permanentes en España (Convenio UPM-FEGA)",
+                    "imagen": "../imput/img/proyectos/images/FEGA/images/01.jpg",
+                    "link": "../output/UPM-FEGA.html",
+                    "descripcion": "El proyecto consiste en el desarrollo de modelos informáticos para la identificación de parcelas agrícolas de viñedo, frutales, olivar y pastos permanentes en situación de abandono. Se apoya en el uso de series multitemporales de imágenes satélite Sentinel con el objetivo de establecer indicadores que puedan contribuir a un sistema de alerta de la situación de abandono de cada parcela en España. Se utilizan índices espectrales para diversos análisis con el apoyo de inteligencia artificial. "
+                },
+                {
+                    "titulo": "DIGIECOQUARRY",
+                    "imagen": "../imput/img/proyectos/images/DIGIECOQUARRY/GEOSO2_FICHA_PROYECTOS_DIGIECOQUARRY-1.jpg",
+                    "link": "https://digiecoquarry.eu/",
+                    "descripcion": "El proyecto Innovative Digital Sustainable Aggregates Systems – DIGIECOQUARRY, financiado por la Comisión Europea y en desarrollo desde junio de 2021 hasta 2025, tiene por objetivo diseñar, implementar y validar un sistema digital de administración de cantera. Para ello se propone la creación y validación de un conjunto integral de sensores, procesos, herramientas y métodos. Los miembros del grupo de investigación que participan en el proyecto, se han centrado en la captura de información geoespacial requerida por aquellos procesos que demandan productos georreferenciados para el análisis, tales como la determinación de volúmenes, la generación de modelos 3D o el análisis de la fragmentación tras las voladuras."
+                },
+                {
+                    "titulo": "EELISA - GREEN PLANET",
+                    "imagen": "../imput/img/proyectos/images/eelisa/images/EELISA-logo500-300x178.png",
+                    "link": "../output/eelisa.html",
+                    "descripcion": "EELISA es una alianza de instituciones destinada a definir e implementar un modelo común de ingeniero europeo arraigado en la sociedad. GEOSO2 forma parte, ofreciendo actividades académicas, vinculadas con entidades y empresas, en el marco de la Comunidad Green Planet que persigue preservar nuestro planeta verde, haciendo uso de tecnología inteligente, y cumpliendo con los objetivos de desarrollo sostenible."
+                }
+            ],
+            "anteriores": [
+                {
+                    "titulo": "INFOLANDYN",
+                    "imagen": "../imput/img/proyectos/images/INFOLANDYN/INFOLANDYN.png",
+                    "link": "https://www.infolandyn.es/index.html",
+                    "descripcion": "Es un “sistema de información diseñado para monitorear los impactos del cambio global mediante el modelado de la dinámica de la cobertura del suelo basado en indicadores de alto valor agregado” derivados de series temporales de teledetección. El sistema proporciona productos claros y objetivos a diferentes escalas, incluidos indicadores fenológicos y dinámicos, modelos de pronóstico e indicadores de impacto climático. Además, INFOLANDYN genera análisis e informes para apoyar la gestión sostenible de los recursos naturales y la formulación de políticas."
+                },
+                {
+                    "titulo": "SEN4STAT",
+                    "imagen": "../imput/img/proyectos/images/SEN4STAT/GEOSO2_FICHA_PROYECTOS_SEN4STAT-1.JPG",
+                    "link": "https://www.esa-sen4stat.org/",
+                    "descripcion": "El proyecto Sen4Stat tuvo como objetivo fundamental fomentar la eficiente incorporación de datos obtenidos mediante observaciones satelitales de la Tierra en los procesos operativos de los Institutos Nacionales de Estadística, mediante la implantación de procedimientos que impliquen el desarrollo y la presentación de productos específicos generados a partir de la interpretación y análisis de imágenes tomadas desde satélites. Se propone la combinación de datos provenientes de observaciones de la Tierra y de encuestas tradicionales para mejorar la calidad y relevancia de las estadísticas agrícolas generadas. "
+                }
+            ],
+            "trabajosacademicos": [
+                {
+                    "titulo": "Estudio de tendencias y modelización de series históricas de temperaturas y precipitaciones (2023)",
+                    "imagen": "../imput/img/proyectos/images/2023-01/01.png",
+                    "link": "https://oa.upm.es/76607/",
+                    "descripcion": "Tesis Doctoral. Este estudio analiza las series temporales de dos variables climáticas, la temperatura y la precipitación, en 47 estaciones de las capitales de provincia de la España peninsular. Las series cubren períodos de tiempo desde la década de 1940 hasta 2013. Los resultados muestran tendencias significativas en 15 de las series de temperatura, y en sólo 5 de precipitación. Respecto a la modelización con modelos ARIMA, se han conseguido ajustes adecuados, para más del 50% de las series de cada variable. Con los modelos obtenidos se han realizado predicciones para los 12 meses del año siguiente al último empleado en cada serie. Por otra parte, el análisis espacial para establecer una red óptima de estaciones de toma de datos climáticos en la España peninsular, ha identificado áreas donde sería interesante densificar la red de muestreo de las dos variables en la España peninsular."
+                },
+                {
+                    "titulo": "Arte e ingeniería: una nueva cultura de transversalidad (2023)",
+                    "imagen": "../imput/img/proyectos/images/2023-02/01.jpg",
+                    "link": "https://oa.upm.es/76664/",
+                    "descripcion": "Tesis Doctoral. La idea de esta tesis es la transversalidad del arte y la ingeniería en relación con la trascendencia o sostenibilidad social. Primeramente, resulta necesario poner el foco en la necesidad de transversalidad entre, aparentemente, distintos ámbitos como los científicos y artísticos. Se persigue fomentar un pensamiento crítico que permita establecer conexiones entre ellos y, en particular, postular a la ingeniería como compendio de ciencia, tecnología y arte, disciplina, esta última, con la que tiene especial relación. El método con el que se le exige a la ingeniería solventar los problemas, y ellos mismos, son diferentes a los científicos, por lo que no puede regirse exclusivamente por la metodología científica. El ingeniero ha de contar con una formación en humanidades que le proteja del excesivo tecnicismo, ya que su trabajo se circunscribe principalmente al ámbito de lo real, no del laboratorio, en el que se desarrolla la ciencia."
+                },
+                {
+                    "titulo": "Generalización de variables medioambientales mediante interpolación GIS (2016)",
+                    "imagen": "../imput/img/proyectos/images/2016-01/01.jpg",
+                    "link": "https://oa.upm.es/76664/",
+                    "descripcion": "Tesis Doctoral. La investigación de esta tesis se centra en el estudio de técnicas geoestadísticas y su contribución a una mayor caracterización del binomio factores climáticos-rendimiento de un cultivo agrícola. El inexorable vínculo entre la variabilidad climática y la producción agrícola cobra especial relevancia en estudios sobre el cambio climático o en la modelización de cultivos para dar respuesta a escenarios futuros de producción mundial. Es información especialmente valiosa en sistemas operacionales de monitoreo y predicción de rendimientos de cultivos Los cuales son actualmente uno de los pilares operacionales en los que se sustenta la agricultura y seguridad alimentaria mundial; ya que su objetivo final es el de proporcionar información imparcial y fiable para la regularización de mercados. En este contexto, se aporta un enfoque alternativo sustituyendo la dimensión tiempo por la de espacio y re-orientando el análisis estadístico de correlación interanual entre rendimiento y factores climáticos, por el estudio de la correlación inter-regional entre ambas variables."
+                },
+                {
+                    "titulo": "La participación de los jóvenes universitarios en la planificación urbana (2015)",
+                    "imagen": "../imput/img/proyectos/images/2015-01/01.jpg",
+                    "link": "https://oa.upm.es/76664/",
+                    "descripcion": "Tesis Doctoral. La participación de los jóvenes en los procesos de planificación urbana en Lisboa, Madrid y Fortaleza ha sido tema central de la presente tesis, cuyos principales objetivos han sido: caracterizar y analizar críticamente las dimensiones más importantes de la participación de jóvenes universitarios en los procesos participativos; aportar características de interés juvenil para un “modelo” de planificación urbana; elaborar directrices para el diseño de actuaciones en un proceso urbano participativo desde la perspectiva de los jóvenes; establecer el alcance de un instrumento urbano participativo reglamentado por el gobierno local entre los jóvenes; determinar si la percepción de los jóvenes universitarios acerca de las acciones del gobierno local tiene influencia en los procesos participativos. Los resultados constatan que es muy baja la participación en los procesos institucionalizados por el gobierno local, en contrapartida es bastante alta en los procesos organizados por los ciudadanos."
+                }
+            ],
+            "history": []
+        },
+        "publicaciones": {
+            "2024": [
+                {
+                    "autores": "Echavarria-Caballero, C., Dominguez-Gomez, J. A., Gonzalez-Garcia, C., Dominguez-Perez, R., & Garcia-Garcia, M. J.",
+                    "titulo": "Warming inland water in peninsular Spain revealed by landsat 5 analysis",
+                    "tipo": "Article",
+                    "revista": "Geocarto International",
+                    "volumen": "39(1)",
+                    "num": "",
+                    "link": "https://doi.org/10.1080/10106049.2024.2371923"
+                }
+            ],
+            "2023": [
+                {
+                    "autores": "Ambrosio, L., Iglesias, L., Marín, C., & Deffense, N.",
+                    "titulo": "Integration of remote sensing data into national statistical office sampling designs for agriculture",
+                    "tipo": "Article",
+                    "revista": "Statistical Journal of the IAOS",
+                    "volumen": "39(2)",
+                    "link": "https://doi.org/10.3233/SJI-220116",
+                    "num": "473-489"
+                },
+                {
+                    "autores": "Fernández-Hernández, M., Calvo, A., Iglesias, L., Castedo, R., Ortega, J. J., Diaz-Honrubia, A. J., Mora, P., & Costamagna, E.",
+                    "titulo": "Anthropic Action on Historical Shoreline Changes and Future Estimates Using GIS: Guadarmar Del Segura (Spain) ",
+                    "tipo": "Article",
+                    "revista": "Applied Sciences (Switzerland)",
+                    "volumen": "13(17)",
+                    "link": "https://doi.org/10.3390/app13179792",
+                    "num": ""
+                },
+                {
+                    "autores": "Hueso, A., González-García, C., Atencia, L. K., Nowack, J. C., & Gómez-Del-campo, M.",
+                    "titulo": "Methodology of stem water potential measurement on hedgerow olive orchards",
+                    "tipo": "Article",
+                    "revista": "Spanish Journal of Agricultural Research",
+                    "volumen": "21(1)",
+                    "link": "https://doi.org/10.5424/sjar/2023211-19595",
+                    "num": ""
+                },
+                {
+                    "autores": "Rosado-Garcia, M. J., Crespo Delgado, D., & Garcia-Garcia, M. J.",
+                    "titulo": "New Alcántara Bridge in Spain",
+                    "tipo": "Article",
+                    "revista": " Heritage and Society",
+                    "volumen": "16(2)",
+                    "link": "https://doi.org/10.1080/2159032X.2023.2185339",
+                    "num": "134-156"
+                },
+                {
+                    "autores": "Rosado-Garcia, M. J., Garcia-Garcia, M. J., & Gonçalves, A.",
+                    "titulo": "The perception of artistic values within civil engineering. A survey from the Iberian Peninsula",
+                    "tipo": "Article",
+                    "revista": "Cogent Engineering",
+                    "volumen": "10(1)",
+                    "link": "https://doi.org/10.1080/23311916.2023.2245198",
+                    "num": ""
+                },
+                {
+                    "autores": "Sánchez Iglesias, F., & Fernández López, A.",
+                    "titulo": " Evaluating Structural Details’ Influence on Elastic Wave Propagation for Composite Structures via Ray Tracing",
+                    "tipo": "Article",
+                    "revista": "Sensors",
+                    "volumen": "23(16)",
+                    "link": "https://doi.org/10.3390/s23167220",
+                    "num": ""
+                }
+            ],
+            "2022": [
+                {
+                    "autores": "Ayuga-Téllez, E., García-Iruela, A., Rielo, J. C., & González-García, C.",
+                    "titulo": "Actions for Monitoring the Gonipterus Pest in Eucalyptus on the Cantabrian Coast",
+                    "tipo": "Article",
+                    "revista": "Agronomy",
+                    "volumen": "12(7)",
+                    "link": "https://doi.org/10.3390/agronomy12071692",
+                    "num": ""
+                },
+                {
+                    "autores": "Desrues, T., & Arranz, A. V.",
+                    "titulo": "Lógicas de género y participación en el movimiento asociativo marroquı́:?‘ Son las asociaciones un eslabón para la igualdad?",
+                    "tipo": "",
+                    "revista": "Cambio, crisis y movilizaciones en el Mediterráneo Occidental",
+                    "volumen": "",
+                    "link": "",
+                    "num": "409-431"
+                },
+                {
+                    "autores": "Desrues, T., Arranz, A. V., & El Bour, H.",
+                    "titulo": "Does gender matter within the Tunisian civil society organizations following the “Arab Spring”? The division of labor and responsibilities among young activists; [¿Importa el género en las organizaciones de la sociedad civil tunecina tras la “primavera árabe”? La división del trabajo y las responsabilidades entre los jóvenes activistas]",
+                    "tipo": "Article",
+                    "revista": "Generos",
+                    "volumen": "11(3)",
+                    "link": "https://doi.org/10.17583/GENEROS.10339",
+                    "num": "233-262"
+                },
+                {
+                    "autores": "Echavarría-Caballero, C., Domínguez-Gómez, J. A., González-García, C., & García-García, M. J.",
+                    "titulo": "Water quality spatial-temporal analysis of gravel pit ponds in the southeast regional park Madrid (Spain) from 1984 to 2009.",
+                    "tipo": "Article",
+                    "revista": "Geocarto International",
+                    "volumen": "37(25)",
+                    "link": "https://doi.org/10.1080/10106049.2022.2037736",
+                    "num": "10636-10658"
+                },
+                {
+                    "autores": "Muñoz, A. V., Sonsoles Dieste.",
+                    "titulo": " Cambio, crisis y movilizaciones en el Mediterráneo Occidental",
+                    "tipo": "",
+                    "revista": "Revista CIDOB d’Afers Internacionals",
+                    "volumen": "",
+                    "link": "https://www.comares.com/libro/cambio-crisis-y-movilizaciones-en-el-mediterraneo-occidental_146391/",
+                    "num": "247-249"
+                },
+                {
+                    "autores": "Rosado-García, M. J., & García-García, M. J.",
+                    "titulo": " Engineering as a common territory of art, science, and technology. A phenomenological response; (La ingeniería como territorio común del arte, la ciencia y la tecnología. Una respuesta fenomenológica)",
+                    "tipo": "Article",
+                    "revista": "Arbor",
+                    "volumen": "198(806)",
+                    "link": "https://doi.org/10.3989/ARBOR.2022.806014",
+                    "num": ""
+                },
+                {
+                    "autores": "Rosado-García, M. J., & García-García, M. J.",
+                    "titulo": " Why the work of engineering is not considered a work of art? Unpublished interview with Julio Martínez Calzón; [¿Por qué no se considera la obra de ingeniería una obra de arte? Entrevista inédita a Julio Martínez Calzón] ",
+                    "tipo": "Article",
+                    "revista": "Informes de la Construccion",
+                    "volumen": "74(567)",
+                    "link": "https://doi.org/10.3989/ic.90020",
+                    "num": ""
+                },
+                {
+                    "autores": "Rosado-García, M. J., Kubus, R., & García-García, M. J.",
+                    "titulo": "The Artistic Vanguards and the Bridges: Innovation and Transversality of Engineering and Other Arts",
+                    "tipo": "Article",
+                    "revista": "Pertanika Journal of Social Sciences and Humanities",
+                    "volumen": "30(4)",
+                    "link": "https://doi.org/10.47836/pjssh.30.4.29",
+                    "num": "2037-2058"
+                }
+            ],
+            "2021": [
+                {
+                    "autores": "Desrues, T., & Velasco Arranz, A.",
+                    "titulo": " Associations and young people during the Tunisian transition: pluralism, socialisation, and democratic legitimation?",
+                    "tipo": "Article",
+                    "revista": "Journal of North African Studies",
+                    "volumen": "26(2)",
+                    "link": "https://doi.org/10.1080/13629387.2019.1665286",
+                    "num": "251-271"
+                },
+                {
+                    "autores": "Mukadi, P. M., & González-García, C.",
+                    "titulo": "Time series analysis of climatic variables in peninsular spain. Trends and forecasting models for data between 20th and 21st centuries",
+                    "tipo": "Article",
+                    "revista": "Climate",
+                    "volumen": "9(7)",
+                    "link": "https://doi.org/10.3390/cli9070119",
+                    "num": ""
+                },
+                {
+                    "autores": "Rosado-García, M. J., Kubus, R., Argüelles-Bustillo, R., & García-García, M. J.",
+                    "titulo": "A new european bauhaus for a culture of transversality and sustainability",
+                    "tipo": "Article",
+                    "revista": "Sustainability (Switzerland)",
+                    "volumen": "13(21)",
+                    "link": "https://doi.org/10.3390/su132111844",
+                    "num": ""
+                },
+                {
+                    "autores": "Sánchez-Medina, A., Ayuga-Téllez, E., Grande-Ortiz, M. A., González-García, C., & García-Abril, A.",
+                    "titulo": "Iterative method of discriminant analysis to classify beech (Fagus sylvatica L.) forest",
+                    "tipo": "Article",
+                    "revista": " Forests",
+                    "volumen": "12(8)",
+                    "link": "https://doi.org/10.3390/f12081128",
+                    "num": ""
+                },
+                {
+                    "autores": "Semper, J. V. O., Lizasoain, I., Abaurrea, J., González-García, C., & Ayuga-Téllez, E.",
+                    "titulo": "What kind of school organizational decisions serve to enhance sustainable personal and social growth?",
+                    "tipo": "Article",
+                    "revista": " Sustainability (Switzerland)",
+                    "volumen": "13(17)",
+                    "link": "https://doi.org/10.3390/su13179995",
+                    "num": ""
+                },
+                {
+                    "autores": "Tornos, L., Domínguez, J. A., Moyano, M. C., Recuero, L., Cicuéndez, V., García-García, M. J., & Palacios-Orueta, A.",
+                    "titulo": "Assessment of the sasi spectral shape index time series for mapping rice ecosystems in the mediterranean region",
+                    "tipo": "Article",
+                    "revista": "Agronomy",
+                    "volumen": "11(7)",
+                    "link": "https://doi.org/10.3390/agronomy11071365",
+                    "num": ""
+                }
+            ],
+            "2020": [
+                {
+                    "autores": "Garcia-Garcia, M. J., Christien, L., García-Escalona, E., & González-García, C.",
+                    "titulo": "Sensitivity of green spaces to the process of urban planning. Three case studies of Madrid (Spain)",
+                    "tipo": "Article",
+                    "revista": "Cities",
+                    "volumen": "100",
+                    "link": "https://doi.org/10.1016/j.cities.2020.102655",
+                    "num": ""
+                },
+                {
+                    "autores": "García-Ventura, C., Bermejo, A., González-García, C., Ángeles Grande-Ortíz, M., Ayuga-Téllez, E., De Medina-Garrido, Á. S., & Ramírez-Montoro, J. J.",
+                    "titulo": "Analysis of differences in the choice of the economic value of urban trees in madrid when displayed in situ and in photographs",
+                    "tipo": "Article",
+                    "revista": " Agronomy",
+                    "volumen": "10(2)",
+                    "link": "https://doi.org/10.3390/agronomy10020311",
+                    "num": ""
+                },
+                {
+                    "autores": "Pedrero, A., Navacerrada, M. Á., Prida, D. de la, Iglesias, L., & Díaz-Chyla, A",
+                    "titulo": "On the accuracy of the sound absorption measurement with an impedance gun",
+                    "tipo": "Article",
+                    "revista": "Applied Acoustics",
+                    "volumen": "158",
+                    "link": "https://doi.org/10.1016/j.apacoust.2019.107039",
+                    "num": ""
+                },
+                {
+                    "autores": "Sánchez Iglesias, F., & Fernández López, A.",
+                    "titulo": "Rayleigh damping parameters estimation using hammer impact tests",
+                    "tipo": "Article",
+                    "revista": " Mechanical Systems and Signal Processing",
+                    "volumen": "135",
+                    "link": "https://doi.org/10.1016/j.ymssp.2019.106391",
+                    "num": ""
+                }
+            ],
+            "2019": [
+                {
+                    "autores": "Echavarría-Caballero, C., Domínguez-Gómez, J. A., González-García, C., & García-García, M. J.",
+                    "titulo": "Assessment of Landsat 5 Images Atmospherically Corrected with LEDAPS in Water Quality Time Series",
+                    "tipo": "Article",
+                    "revista": " Canadian Journal of Remote Sensing",
+                    "volumen": "45(5)",
+                    "link": "https://doi.org/10.1080/07038992.2019.1674136",
+                    "num": "691-706"
+                },
+                {
+                    "autores": "González-Gómez, K., Iglesias, L., Rodríguez-Solano, R., & Castro, M.",
+                    "titulo": "Framework for 3D point cloud modelling aimed at road sight distance estimations",
+                    "tipo": "Article",
+                    "revista": "Remote Sensing",
+                    "volumen": "11(23)",
+                    "link": "https://doi.org/10.3390/rs11232730",
+                    "num": ""
+                },
+                {
+                    "autores": "Iglesias, L., De Santos-Berbel, C., Pascual, V., & Castro, M.",
+                    "titulo": "Using small unmanned aerial vehicle in 3D modeling of highways with tree-covered roadsides to estimate sight distance",
+                    "tipo": "Note",
+                    "revista": "Remote Sensing",
+                    "volumen": "11(22)",
+                    "link": "https://doi.org/10.3390/rs11222625",
+                    "num": ""
+                },
+                {
+                    "autores": "Villanueva, J. R. E., Martínez, L. I., & Montiel, J. I. P.",
+                    "titulo": "DEM generation from fixed-wing UAV imaging and LiDAR-derived ground control points for flood estimations",
+                    "tipo": "Article",
+                    "revista": "Sensors",
+                    "volumen": "19(14)",
+                    "link": "https://doi.org/10.3390/s19143205",
+                    "num": ""
+                }
+            ],
+            "history": []
+        },
+        "quienes_somos": {
+            "secciones": [
+                {
+                    "pregunta1": "Qué hacemos:",
+                    "respuesta1": "Monitorear, analizar, modelizar y simular."
+                },
+                {
+                    "pregunta2": "Dónde lo hacemos:",
+                    "respuesta2": "En nuestro entorno, formado por los medios ambiental, social y económico."
+                },
+                {
+                    "pregunta3": "Cómo lo hacemos:",
+                    "respuesta3": "Utilizando enfoque holístico con especial énfasis geoespacial y social."
+                },
+                {
+                    "pregunta4": "Con qué lo hacemos:",
+                    "respuesta4": "aplicando herramientas de geomática, simulación y metodologías estadísticas: GIS, Big Data, Remote Sensing, Artificial Inteligence, encuestas, series de tiempo etc."
+                },
+                {
+                    "pregunta5": "Para qué lo hacemos:",
+                    "respuesta5": "Promover un desarrollo sostenible."
+                }
+            ],
+            "investigadores": [
+                {
+                    "nombre": "María Jesús García García",
+                    "imagen": "../imput/img/quienes_somos/investigadores/MJGG.jpg",
+                    "bio": "Doctora Ingeniera Agrónoma (2007) por la Universidad Politécnica de Madrid. Profesora de dicha universidad desde el año 2000 y PCDL desde 2007, adscrita al Departamento de Ingeniería y Gestión Forestal y Ambiental en la ETSI de Montes, Forestal y del Medio Natural de la UPM. Docencia: Expresión gráfica en la ingeniería, Análisis espacial y Sistemas Información Geográfica e Innovación Educativa. Actividad investigadora enfocada en el uso de herramientas geoespaciales en ingeniería. aplicando tecnologías CAD, SIG y teledetección para el análisis geoespacial de diferentes fenómenos de la biosfera. Líneas de trabajo: monitoreo y evaluación de: calidad de aguas continentales, dinámicas periurbanas, evolución del paisaje, cambios agrícolas y forestales y estado del arbolado urbano.",
+                    "link": "https://orcid.org/0000-0002-1213-6963",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Concepción González",
+                    "imagen": "../imput/img/quienes_somos/investigadores/CGG.jpg",
+                    "bio": " Dr. Ingeniero de Montes por la UPM, Profesora. Titular de Universidad desde 1991, adscrita al Departamento de Ingeniería y Gestión Forestal y Ambiental. Docencia en materias de Estadística aplicada, Investigación Operativa, Índices y modelos en calidad de agua y Análisis espacial en la ETSI de Montes, Forestal y del Medio Natural de la UPM. Líneas de investigación: aplicación de Técnicas Estadísticas al estudio de datos ambientales y del medio natural (toma de datos, análisis de la información y toma de decisiones, modelización). Algunos de los trabajos más recientes se enfocan en evaluación de calidad de aguas continentales, estado del arbolado urbano, cultivos agrícolas y plagas forestales.",
+                    "link": "https://www.researchgate.net/profile/Concepcion-Gonzalez-Garcia",
+                    "link_text": "ResearchGate"
+                },
+                {
+                    "nombre": "Luis Iglesias Martínez",
+                    "imagen": "../imput/img/quienes_somos/investigadores/LIM.jpg",
+                    "bio": "Dr. Ing. Agrónomo por la Universidad Politécnica de Madrid y Profesor Titular de Universidad del Departamento de Ingeniería Geológica y Minera de la Universidad Politécnica de Madrid, habiendo pertenecido anteriormente al Departamentos de Explotación de Recursos Minerales y Obras Subterráneas y al Departamento de Ingeniería Cartográfica, Geodesia y Cartografía – Expresión Gráfica de dicha Universidad. Su actividad investigadora se enmarca en el área de conocimiento de Ingeniería Cartográfica. Dentro de ella ha realizado diversas investigaciones sobre la aplicación de los Sistemas de Información Geográfica y la Teledetección a distintos aspectos de la ingeniería, como son el ruido, el cambio climático y el diseño geométrico de carreteras. Ha publicado una veintena de artículos en revistas, y es autor/coautor de varios libros o capítulos de libros.",
+                    "link": "https://orcid.org/0000-0003-2561-8934",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Luis Izquierdo Mesa",
+                    "imagen": "../imput/img/quienes_somos/investigadores/LIMe.jpg",
+                    "bio": "Doctor en Geografía (Sistemas de Información Geográfica y Teledetección Espacial). Universidad de Alcalá de Henares (2009). Vinculado a la Universidad Politécnica de Madrid desde 2016 donde imparte clases de Simulación Aeroespacial, Programación y Dibujo Técnico. Experiencia en la empresa privada, donde ha dirigido y coordinado numerosos proyectos de I+D (FPT7, H2020, Avanza). Experiencia en entornos universitarios, donde ha sido fundador e IP del grupo de investigación Geomática Aplicada(Universidad Nebrija) y en ámbitos internacionales donde ha sido Consultor en Naciones Unidas en el área de Geointeligencia.",
+                    "link": "https://cvn.fecyt.es/editor/cvnOnline/0000-0001-9639-6342",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "José Luis Pérez Benedito",
+                    "imagen": "../imput/img/quienes_somos/investigadores/JLPB.jpg",
+                    "bio": "Doctor Ingeniero por la Universidad Politécnica de Madrid. Profesor del Departamento de Aeronaves y Vehículos Espaciales de la ETSI Aeronáutica y del Espacio de la UPM desde 2006. Docencia: Expresión Gráfica en la Ingeniería, Diseño Gráfico, Simuladores Gráficos de Formación y Entrenamiento. Actividad investigadora orientada a la ingeniería gráfica (geometría aplicada a sistemas CAD, diseño geométrico avanzado en ingeniería y programación gráfica). Ha participado en numerosos proyectos de innovación educativa enfocados a la mejora de la visión espacial en la ingeniería. Líneas de investigación: programación, modelado y optimización de bases de datos gráficas orientadas a simuladores gráficos de formación y entrenamiento; programación, modelado y gestión de información geográfica; diseño preliminar y avanzado en ingeniería mecánica. Ha desarrollado proyectos competitivos para la construcción de simuladores gráficos de formación (Indra, Metro de Madrid y la Empresa Municipal de Transportes de Madrid), y en diversos programas de estudio e ingeniería de diseño (AIRBUS Defence & Espacio).",
+                    "link": "https://orcid.org/0000-0002-5442-0997",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Ana Velasco Arranz",
+                    "imagen": "../imput/img/quienes_somos/investigadores/AVA.jpg",
+                    "bio": "Ingeniera agrónomo y doctora en Sociología y Políticas agrarias por la Universidad de Paris-Nanterre. Desde 2006 es Profesora de la UPM en el Departamento de Economía Agraria, Estadística y Gestión de Empresas de la ETSI Agronómica, Alimentaria y de Biosistemas. Actualmente imparte clases de Economía Social, Técnicas de Investigación Social, Desarrollo Rural y Sociología Rural y Medioambiente en la formación de Máster y de graduados. Como investigadora participa en diversos proyectos y actividades de investigación con el Departamento del CNRS francés LADYSS (Laboratorio de Dinámicas Sociales et Recomposición de espacios), Sup-Agro de Montpellier y el Instituto de Estudios Sociales Avanzados (IESA-CSIC) de Córdoba. Sus líneas de investigación se orientan hacia: - Cambios sociales y democratización en el norte de Africa, - Análisis de género y juventud como agentes de sostenibilidad en el desarrollo rural; - Actitudes y representaciones de los agricultores y la sociedad rural en los procesos de cambio.",
+                    "link": "https://orcid.org/0000-0001-6672-2135",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Mª Ángeles Grande Ortiz",
+                    "imagen": "../imput/img/quienes_somos/investigadores/MAGO.png",
+                    "bio": "Doctora Ingeniera de Montes (1996) por la Universidad Politécnica de Madrid. Profesora desde el año 2003 y Profesora Titular de Universidad desde 2014, adscrita al Departamento de Ingeniería y Gestión Forestal y Ambiental en la ETSI de Montes, Forestal y del Medio Natural de la UPM. Docencia: Mecánica y Mecanismos, Materiales y Medio Ambiente y Elementos de Gestión y Valoración de Zonas Verdes. Actividad investigadora: ordenación del territorio, gestión agroforestal y conservación de la biodiversidad, valoración del paisaje, valoración del arbolado urbano, índices de valoración e inventario.",
+                    "link": "",
+                    "link_text": ""
+                },
+                {
+                    "nombre": "Gabriel Dorado Martín",
+                    "imagen": "../imput/img/quienes_somos/investigadores/GDM.jpg",
+                    "bio": "Ingeniero Técnico Forestal por la Universidad Politécnica de Madrid y MSc en Restauración de Ecosistemas por UAH, UCM, UPM y URJC. Profesor encargado de curso de la UPM desde 1986 y titular de Escuela Universitaria desde 1987. Director del Departamento de Proyectos y Planificación Rural desde el año 2000 al 2004. Experto en el uso de herramientas para la gestión de la información gráfica digital (CAD-GIS). En la actualidad adscrito al Departamento de Ingeniería y Gestión Forestal y Ambiental de la Escuela Técnica Superior de Ingeniería de Montes, Forestal y del Medio Natural. Imparto docencia en Expresión Gráfica en la Ingeniería, en Gestión de la Información Espacial para la Restauración de Ecosistemas y en Proyectos de Restauración Ecológica. Soy Director del Máster en Jardines Históricos y Servicios Ecosistémicos de la Infraestructura Verde de la UPM. He realizado treinta proyectos de Transferencia de Tecnología en materia de gestión de infraestructura verde, mitigación de efectos del cambio climático, restauración ecológica, conectividad mejora de los servicios ecosistémicos de la Infraestructura Verde, e inventariación y seguimiento de la gestión del arbolado urbano y periurbano, y he colaborado en el desarrollo de diversos proyectos de investigación social y tecnológica.",
+                    "link": "https://orcid.org/0000-0003-4515-1884",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Carloina Echavarría Caballero",
+                    "imagen": "../imput/img/quienes_somos/investigadores/CEC.jpg",
+                    "bio": "Doctora en Ingeniería y Gestión del Medio Natural (2024) por la Universidad Politécnica de Madrid e Ingeniera geomática por la Universidad del Valle en Colombia, MSc en Geoinformatics Engineering por el Politecnico di Milano. Con más de 10 años de experiencia en proyectos e investigación aplicada con afiliación actual como personal docente investigador en la UPM. He contribuido a una amplia variedad de instituciones públicas y privadas internacionales desarrollando y utilizando tecnologías geoespaciales para la toma de decisiones, principalmente en entornos ambientales y agrícolas a múltiples escalas. Con alto nivel de conocimiento en el uso de sistemas de información geográfica y software de teledetección y un sólido conocimiento de las estadísticas, el aprendizaje automático, el análisis espacial y la automatización de tareas complejas y de gran tamaño de datos utilizando tecnologías de vanguardia. Especialidades: software de código abierto, tecnologías geoespaciales, inteligencia artificial, sistemas de monitoreo de cobertura y uso del suelo, monitoreo ambiental, estudios agrícolas, calidad de agua, sistemas de información geográfica, teledetección.",
+                    "link": "https://orcid.org/0009-0005-3692-9246",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Daniel Quijada Herranz",
+                    "imagen": "../imput/img/quienes_somos/investigadores/DQH.jpg",
+                    "bio": "Graduado en Ingeniería Forestal por la Universidad Politécnica de Madrid (2018). Máster Universitario en Jardinería y Paisajismo en la misma universidad (en curso). Actualmente es Investigador predoctoral contratado en el grupo, asociado a proyectos de arbolado urbano en campos deportivos Alta dedicación al arbolado en entorno urbano, fitopatología, evaluación de riesgo, estudio de mejora del arbolado con tratamiento fitosanitarios, diseño y planificación de podas. También experiencia ligada al entorno rural especialmente en aspectos forestales, como la prevención y extinción de incendios, plagas, gestión etc. Interesado en el enfoque territorial de estas disciplinas con manejo de tecnologías CAD y SIG.",
+                    "link": "",
+                    "link_text": ""
+                },
+                {
+                    "nombre": "Fernando Sánchez Iglesias",
+                    "imagen": "../imput/img/quienes_somos/investigadores/FSI.jpg",
+                    "bio": "Graduado en Ingeniería Aeroespacial y Máster Universitario en Sistemas Espaciales por la Universidad Politécnica de Madrid. Desarrolla su carrera profesional en AIRBUS como ingeniero de análisis de estructuras con más de diez años de experiencia. Profesor asociado en la ETSI Montes, Forestal y Medio Natural de la UPM. Voluntario de Zerca y Lejos, ONGD que desarrolla gran parte de su labor en el sur de Camerún a favor de los derechos humanos de la población indígena, desarrollando proyectos que fomenten el acceso a la sanidad, agua potable y educación.",
+                    "link": "https://www.researchgate.net/profile/Fernando-Sanchez-Iglesias",
+                    "link_text": "ResearchGate"
+                }
+            ],
+            "colaboradores": [
+                {
+                    "nombre": "Miguel Angel Rincones Salinas",
+                    "imagen": "../imput/img/quienes_somos/investigadores/MARS.jpg",
+                    "bio": "Doctor y Máster en investigación, modelización y análisis del riesgo en el medio ambiente por la Universidad Politécnica de Madrid, ETSI Minas (2017). Ingeniero del medio ambiente y los recursos naturales por la Universidad Gran Mariscal de Ayacucho (Venezuela). Es especialista ambiental con más de nueve años de experiencia en la evaluación de riesgos e impactos ambientales/sociales y en la propuesta y seguimiento de la implementación de salvaguardas y estrategias para aumentar la sostenibilidad, la resiliencia climática y reducir la vulnerabilidad de las operaciones de inversión. Actualmente ejerce como Nature and Biodiversity Consultant en Asian Infrastructure Investment Bank.",
+                    "link": "https://www.researchgate.net/profile/Rincones-M-2",
+                    "link_text": "ResearchGate"
+                },
+                {
+                    "nombre": "Gil Rito Gonçalves",
+                    "imagen": "../imput/img/quienes_somos/investigadores/GRG.jpg",
+                    "bio": "Gil Rito Gonçalves es profesor de la Facultad de Ciencias y Tecnología de la Universidad de Coimbra donde enseña Fotogrametría Digital y Teledetección (P&RS). Doctor en Geomática por la Universidad de Marne-la-Vallée (Paris-Est) Graduado en Ingeniería Geomática por la Universidad de Coimbra. Como investigador del Instituto de Engenharia de Sistemas e Computadores de Coimbra (INESC Coimbra) ha participado como IP y miembro del equipo en varios proyectos de investigación financiados por Fundação para a Ciência e a Tecnologia de Portugal en las áreas de: Teledetección, Agricultura de Precisión, Escaneo Láser y Procesamiento Digital de Imágenes. Sus principales intereses de investigación se encuentran en las áreas de visión por computadora geoespacial y extracción de geoinformación a partir de imágenes satelitales, UAS y terrestres y datos de escaneo láser, utilizando métodos de fotogrametría de estructura a partir de movimiento, aprendizaje automático, teledetección y análisis de imágenes basadas en objetos geográficos. En este área ha publicado más de 100 artículos en los congresos internacionales más importantes de Geociencias y P&RS y en revistas revisadas por pares.",
+                    "link": "https://orcid.org/0000-0002-1746-0367",
+                    "link_text": "ORCID"
+                },
+                {
+                    "nombre": "Roberto Marivela Colmenarejo",
+                    "imagen": "../imput/img/quienes_somos/investigadores/RMC.jpg",
+                    "bio": "Ingeniero de Montes por la Universidad Politécnica de Madrid (UPM) (2006). Doctor en Ingenieria de Montes (2016) (UPM) y Doctor en Geociencias (2017) (Virginia Tech). Inició su carrera investigadora en el (Cedex) (2007) en el campo de la simulación lagrangiana tridimensional de fluidos. Se desarrolló en campos de programación como optimización de hardware y software y en la gestión, análisis y visualización de grandes datos trabajando para el Flood Control Disctrict of Maricopa County (Arizona) como Ingeniero de Sistemas (2019-2022) y para Intel como Technical Evangelist (2022-2024) en los campos de renderizado, optimización, Machine Learning y redes neuronales. Actualmente trabaja como free-lance desarrollando sus propios programas informáticos con un espíritu emprendedor, aportando soluciones simples y eficientes a retos complejos.",
+                    "link": "https://scholar.google.es/citations?hl=es&user=tPDvTksAAAAJ",
+                    "link_text": "Google Scholar"
+                },
+                {
+                    "nombre": "Paula Tagle Hernández",
+                    "imagen": "../imput/img/quienes_somos/investigadores/PTH.jpg",
+                    "bio": "Licenciada en Medicina y Cirugía por la Universidad de Alcalá de Henares (2007). Especialista en Medicina Familiar y Comunitaria MFyC (2013). Experiencia de más de 10 años trabajando en atención primaria con el SERMAS (Servicio Madrileño de Salud) como MFyC, y desde el 2015 también como pediatra de atención primaria. Colaboración con el programa Europeo Hippokrates de la Semfyc en el estudio y mejora de la atención primaria en Polonia, España y resto de Europa (2014) con publicación del proyecto. Colaboración docente con la UCM, URJC y UAM en prácticas de estudiantes de medicina y enfermería. Colaboración con Asociación Zerca y Lejos (ZyL) desde el año 2009 en proyectos de cooperación internacional para el desarrollo en Camerún y Perú. Colaboración con la UPM en proyectos de investigación relacionados con la mejora de acceso al agua potable, saneamiento y reconocimiento de derechos del pueblo pigmeo baka en Camerún (2024). Especial interés en proyectos de investigación y desarrollo en defensa de los derechos humanos de poblaciones vulnerables, tanto a nivel nacional como internacional, así como en políticas ambientales, sanitarias y sociales.",
+                    "link": "",
+                    "link_text": ""
+                },
+                {
+                    "nombre": "Raquel Domínguez Pérez",
+                    "imagen": "../imput/img/quienes_somos/investigadores/RDP.jpg",
+                    "bio": "Ambientóloga por la Universidad Autónoma de Madrid, con formación de posgrado en Gestión de Desastres (UCM/UPM) y Riesgos Naturales (ULE), y conocimientos en programación adquiridos a través del ciclo superior en Desarrollo de Aplicaciones Multiplataforma. Con más de 5 años de experiencia profesional como técnico GIS en instituciones públicas y privadas, realizando tareas de tratamiento, análisis y visualización de datos geoespaciales, así como tareas de implementación de tecnologías geoespaciales. Especialidades: SIG, teledetección, análisis espacial, servicios IDE, Google Earth Engine, gestión de datos ambientales, tecnologías open-source.",
+                    "link": "",
+                    "link_text": ""
+                },
+                {
+                    "nombre": "Prueba",
+                    "imagen": "../imput/img/quienes_somos/img1.png",
+                    "bio": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de esta sección",
+                    "link": "https://geoso2.es",
+                    "link_text": "GEOSO2"
+                }
+            ],
+            "history": []
+        },
+        "pagina2": {
+            "noticias": [
+                {
+                    "titulo": "Investigadores y alumnos de la UPM visitan la Universidad de Bertoua en su viaje de campo a poblaciones baka de Camerún.",
+                    "imagen": "../imput/img/noticias/20240907/images/01.jpg",
+                    "descripcion": "Se han reunido con investigadores del Institut superieur d’agriculture, du boit, de l’eau et de l’environnemet, poniendo en común diversas experiencias y actividades en temas como: detección remota aplicada a deforestación, inundaciones y cambios en el uso del suelo, transformación y comercialización de productos forestales no leñosos, etc.",
+                    "link": "noticia01.html",
+                    "link_text": "Leer más"
+                },
+                {
+                    "titulo": "El proyecto Sen4Stat ofrece productos \\\"Earth Observation\\\" EO: prototipo y casos de uso en España.",
+                    "imagen": "../imput/img/noticias/20240223_01.jpg",
+                    "descripcion": "El prototipo español del proyecto Sen4Stat integra datos EO y datos terrestres, y tiene como objetivo reducir los costos de estudio manteniendo la precisión y mejorando la puntualidad de las estimaciones de superficie de cultivo y producción.",
+                    "link": "https://www.esa-sen4stat.org/user-stories/spain-cycle-1-demo/",
+                    "link_text": "Leer más"
+                }
+            ],
+            "history": []
+        },
+        "busqueda": {
+            "contacto": {
+                "descripcion": "El Grupo de Investigación Geoespacial y Dinámicas Territoriales para la Sostenibilidad tiene su sede en la Escuela Técnica Superior de Ingeniería de Montes, Forestal y del Medio Natural de la Universidad Politécnica de Madrid.",
+                "titulo": "Contacta con nosotros",
+                "logo": {
+                    "src": "../imput/logos/email-geoso2.svg",
+                    "width": "172px",
+                    "height": "50"
+                },
+                "mapa": {
+                    "src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3036.176379382654!2d-3.7229139999999994!3d40.449233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422835fae5e141%3A0x8edc1a24b1f863db!2sETSI%20Montes%2C%20Forestal%20y%20del%20Medio%20Natural.%20Edificio%20Forestales.!5e0!3m2!1sen!2ses!4v1708282419113!5m2!1sen!2ses",
+                    "width": "900",
+                    "height": "550"
+                }
+            },
+            "history": []
+        },
+        "mas-proyectos": {
+            "club": {
+                "titulo": "Arbolado Autóctono en campos deportivos",
+                "subtitulo": "Estudio sobre gestión de la vegetación autóctona para su mantenimiento y conservación en las instalaciones de la Real Sociedad Hípica Española Club de Campo, S.A.",
+                "contrato": "Contrato privado Financiado por: RSHECC, S.A.",
+                "periodo": "2023-2024",
+                "parrafos": [
+                    {
+                        "texto1": "El club dispone de un rico patrimonio arbóreo de carácter autóctono que ha sido inventariado y se mantiene actualizado mediante Sistemas de Información Geográfica, utilizando técnicas de medición en campo (Figura 1 y Figura 2) y geolocalización (Figura 3)."
+                    },
+                    {
+                        "texto2": "En la base de datos se encuentran recogidas especies como encinas (Quercus ilex subsp. ballota), pinos piñoneros (Pinus pinea), pinos carrascos (Pinus halepensis) y otras especies como cipreses (Cupresus sp.), enebro de la miera (Juniperus oxycedrus), álamos (Populus sp.) y olmos (Ulmus sp.)."
+                    },
+                    {
+                        "texto3": "Entre los árboles inventariados se encuentran ejemplares singulares tanto de encinas como de enebros, cuyo elevado valor se trata de preservar con los tratamientos fitofortificantes de primavera y otoño."
+                    },
+                    {
+                        "texto4": "Desde hace 25 años se evalúa el efecto de diversos tratamientos (Figura 4 y Figura 5) sobre la salud de árboles del club, habiéndose obtenidos resultados razonablemente favorables para la protección y mejora de estos ejemplares a largo plazo. Este trabajo de investigación se ha dado a conocer en algunos congresos especializados"
+                    },
+                    {
+                        "textonegro": "(García Ventura et al., 2015)."
+                    },
+                    {
+                        "texto5": "Además, se realizan estudios y labores de vigilancia y control."
+                    },
+                    {
+                        "texto6": "Otra de las líneas de trabajo en el convenio es el asesoramiento técnico y la elaboración de informes sobre temas o áreas específicas que afectan al estado del arbolado, estos trabajos se realizan a petición de los responsables del Club. Cada año suelen realizarse labores de vigilancia y control de posibles focos de organismos patógenos (Figura 6), como hongos de pudrición de la madera o insectos perforadores con grave riesgo para la estabilidad de alguno de los pies arbóreos."
+                    },
+                    {
+                        "texto7": "También realizamos seguimiento de las talas y apeos, además de las labores de poda."
+                    },
+                    {
+                        "texto8": "La extensión en el tiempo de este proyecto, así como la variedad de temáticas ambientales a tratar y las diversas herramientas tecnológicas a emplear ofrece una buena oportunidad de formación como aprendizaje servicio, por lo que en su marco se han desarrollado varios trabajos fin de máster y algunas prácticas en empresa."
+                    }
+                ],
+                "figuras": [
+                    {
+                        "id": "fig-01",
+                        "figura1": "../imput/img/proyectos/images/club/images/02.png",
+                        "pie1": "Figura 1: Medición en campo de diámetros (forcípula)"
+                    },
+                    {
+                        "id": "fig-02",
+                        "figura2": "../imput/img/proyectos/images/club/images/03.png",
+                        "pie2": "Figura 2: Medición en campo de alturas (hipsómero Blume Leiss)"
+                    },
+                    {
+                        "id": "fig-03",
+                        "figura3": "../imput/img/proyectos/images/club/images/04.png",
+                        "pie3": "Figura 3: Proceso de inventario y geolocalización. Móvil con app activa inventariando un árbol (izquierda) y pantalla de PC con sistema GIS mostrando posición gráfica y valores alfanuméricos almacenados (derecha)"
+                    },
+                    {
+                        "id": "fig-04",
+                        "figura4": "../imput/img/proyectos/images/club/images/05.png",
+                        "pie4": "Figura 4: Tratamiento aéreo Enebro singular"
+                    },
+                    {
+                        "id": "fig-05",
+                        "figura5": "../imput/img/proyectos/images/club/images/06.jpg",
+                        "pie5": "Figura 5: Tratamiento radicular Encina singular"
+                    },
+                    {
+                        "id": "fig-06",
+                        "figura6": "../imput/img/proyectos/images/club/images/07.jpg",
+                        "pie6": "Figura 6: Hongo tipo Armillaria en base de tronco..."
+                    },
+                    {
+                        "id": "fig-07",
+                        "figura7": "../imput/img/proyectos/images/club/images/08.jpg",
+                        "pie7": "Figura 7: Despiece de encina ejemplar afectada por pudrición..."
+                    }
+                ]
+            }
+        },
+        "Eventos": {
+            "agenda": [
+                {
+                    "titulo": "TALLER: Iniciación a AutoCAD 2D.",
+                    "descripcion": "Con el objetivo de facilitar el acceso a una herramienta de diseño gráfico general y de amplio uso, se ha programado un taller de 6 horas de duración en el que se explicarán algunos conceptos básicos, se darán indicaciones de trabajo con CAD 2D y se aplicará todo lo aprendido. Gratuito para estudiantes E.T.S.I. Montes Forestal y del Medio Natural previa inscripción hasta completar aforo. Otros casos consultar. Fecha: lunes 16, 23 y 30 septiembre 2024 Hora: 15:30h Lugar: ETSI Montes, Forestal y del Medio Natural. Edif. Forestales. Aula de Proyectos.",
+                    "fecha": "lunes 16, 23 y 30 septiembre 2024 Hora: 15:30h",
+                    "hora": "",
+                    "lugar": "ETSI Montes, Forestal y del Medio Natural. Edif. Forestales. Aula de Proyectos.",
+                    "imagen": "../imput/img/agenda/20240906/01.png",
+                    "alt": "Evento 3",
+                    "link": "https://docs.google.com/forms/d/e/1FAIpQLScW5okR_w5-ntzXSDghb-__urGFhEN4wpPZXVWXQVTrTa12fA/viewform?pli=1",
+                    "texto_link": "Ver detalles"
+                },
+                {
+                    "titulo": "MÁSTER: Jardines históricos y servicios ecosistémicos de la infraestructura verde. Módulo IV: Jardines Botánicos.",
+                    "descripcion": "Los Jardines Botánicos tienen como objetivo promover el conocimiento, la conservación y el disfrute de plantas, desarrollar investigaciones científicas con objeto de incrementar el conocimiento sobre la diversidad vegetal.",
+                    "fecha": "15 marzo 2024",
+                    "hora": "",
+                    "lugar": "Semipresencial, las clases se desarrollarán en el Real Jardín Botánico de Madrid.",
+                    "imagen": "../imput/img/agenda/20240424/01.jpg",
+                    "alt": "Evento 2",
+                    "link": "https://blogs.upm.es/masterjardineshistoricosseiv/modulo-iv/",
+                    "texto_link": "Leer"
+                },
+                {
+                    "titulo": "TALLER: Teledetección y SIG aplicados a la cooperación internacional. Cambios de usos de suelo.",
+                    "descripcion": "Con el tema “Mapeo de territorios inundados en la Reserva del río Dja. Camerún”. Se realizará el próximo taller organizado por GEOSO2 y Zerca y Lejos ONGD para mejorar las condiciones de vida de la etnia baka.",
+                    "fecha": "24 abril 2024",
+                    "hora": "16:00h",
+                    "lugar": "ETSI Montes, Forestal y del Medio Natural. Edif. Forestales. Aula de Proyectos.",
+                    "imagen": "../imput/img/agenda/20240315/01.jpg",
+                    "alt": "Evento 1",
+                    "link": "https://www.esa-sen4stat.org/user-stories/spain-cycle-1-demo/",
+                    "texto_link": "Leer más"
+                }
+            ],
+            "history": []
+        },
+        "static_files": [
+            "styles.css",
+            "logo.png"
+        ],
+        "colaboradores": [],
+        "noticias": [],
+        "carousel": [],
+        "paginas": [
+            {
+                "id": "pagina_001",
+                "portada": "../imput/img/paginas/img1.png",
+                "titulo": "pagina de prueba",
+                "cuerpo": [
+                    {
+                        "texto": "este parrafo es un parrafo de pruebae ste parrafo es un parrafo de prueba este parrafo es un parrafo de prueba\neste parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de pruebaeste parrafo es un parrafo de pruebae ste parrafo es un",
+                        "imagen": "../imput/img/paginas/img2.png",
+                        "pie_imagen": "imagen 2 de prueba",
+                        "enlace": "",
+                        "texto_enlace": ""
+                    },
+                    {
+                        "texto": "este parrafo es un parrafo de pruebae ste parrafo es un parrafo de prueba este parrafo es un parrafo de prueba\neste parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de prueba este parrafo es un parrafo de pruebaeste parrafo es un parrafo de pruebae ste parrafo es un parrafo de prueba este parrafo es un parrafo de prueba",
+                        "imagen": "../imput/img/paginas/img3.png",
+                        "pie_imagen": "",
+                        "enlace": "",
+                        "texto_enlace": ""
+                    }
+                ],
+                "autor": "jesus",
+                "fecha": "27-01-2026"
+            }
+        ],
+        "participa": [
+            {
+                "imagen": "../imput/img/participa/img1.png",
+                "titulo": "Prueba",
+                "descripcion": "Esta sección es de prueba para comprobar la funcionalidad y el resultado final de esta sección",
+                "link": "https://geoso2.es"
+            }
+        ],
+        "history": []
+    }
+}

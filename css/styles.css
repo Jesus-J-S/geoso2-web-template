@@ -1,0 +1,402 @@
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  min-height: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(50, 57, 77);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 107, 127);
+  border-radius: 6px;
+  border: 2px solid rgb(50, 57, 77);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(120, 127, 147);
+}
+.navbar-nav {
+  flex-wrap: nowrap;
+  gap:0.5rem;
+}
+
+.navbar-wrapper {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: none;
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35px;
+  padding-right: 35px;  
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  background-color: rgb(74, 81, 101);
+  color: rgb(205, 203, 203);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0
+
+}
+.main-content {
+  flex: 1;
+}
+/* --- FOOTER --- */
+.footer {
+  background-color: #212529;
+  padding: 15px 0;
+  margin-top: 80px;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0px;
+}
+
+.nav-footer-left p,
+.nav-footer-center p,
+.nav-footer-right p {
+  margin: 0;
+}
+
+.navbar-logo {
+  height: 24px;
+}
+.navbar-brand {
+  margin-left: 0;
+  padding-left: 0;  
+}
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.navbar-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.nav-link .menu-text {
+  font-size: clamp(0.6rem, 1vw, 0.9rem);
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: rgba(255,255,255,.55);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  color: #fff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+/* Texto adicional */
+.research-group-text {
+  color: rgba(255,255,255,.55);
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  font-size: 0.6rem;
+}
+/* Contenedor del buscador fuera del navbar: igual que bg-dark y ancho completo */
+.search-container {
+  background-color: #212529;   /* mismo color que navbar bg-dark */
+  width: 100%;                 /* ocupa todo el ancho */
+  border-top: 1px solid rgba(255,255,255,.1); /* sutil separación */
+}
+/* Form animado: despliegue vertical suave a ancho completo */
+.search-form {
+  width: 100%;
+  display: flex;               /* para que el input pueda usar flex:1 */
+  max-height: 0;               /* ANIMACIÓN VERTICAL */
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+.search-form.active {
+  max-height: 80px;            /* altura suficiente para el input */
+  opacity: 1;
+}
+/* Input ocupa todo el ancho y mantiene estética oscura */
+.search-input {
+  flex: 1;
+  background-color: #2a2f34;
+  border-color: #2a2f34;
+  color: #fff;
+  margin: 0.5rem 0.75rem;      /* respiración lateral */
+}
+.search-input::placeholder {
+  color: rgba(255,255,255,.55);
+}
+.search-input:focus {
+  background-color: #2a2f34;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(25,135,84,.25);
+  border-color: rgba(255,255,255,.75);       /* success */
+}
+/* Icono lupa dentro del navbar */
+.search-icon {
+  color: rgba(255,255,255,.55);
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.search-icon:hover {
+  color: #fff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+.marco {
+    display: block;
+    background-color: rgb(74, 81, 101);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.marco:hover {
+    background-color: rgb(62, 67, 82);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.marco1 {
+    display: inline;
+    background-color: rgb(74, 81, 101);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.marco1:hover {
+    background-color: rgb(62, 67, 82);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.marco2 {
+    border: 2px solid rgb(86, 93, 113);
+    padding: 12px;
+    border-radius: 8px;
+
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;  
+    text-align: center; 
+
+}
+
+.marco3 {
+    border: 2px solid rgb(86, 93, 113);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.imagen-derecha {
+    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.titulos {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.body-rafagas {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.texto-justificado {
+  flex: 1;         /* el texto ocupa el resto */
+  text-align: justify;
+}
+
+.marco-columna, .marco {
+  background-color: rgb(74, 81, 101);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: 45%;
+  text-align: center;
+}
+
+.marco-columna img, .marco img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.marco-columna p, .marco p {
+  color: white;
+}
+
+a.link-reset {
+  text-decoration: none; /* quita subrayado */
+  color: inherit;        /* mantiene color normal */
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.img-marco {
+  border: 2px solid #555;
+  border-radius: 8px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+
+.img-uniforme {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* --- CARRUSEL (ORIGINAL) --- */
+
+#miCarrusel img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.miniatura {
+  display: none;
+  width: 150px;
+  border: 1px solid #ccc;
+}
+
+.preview-img:hover + .miniatura {
+  display: block;
+  position: absolute;
+}
+
+.preview-img {
+  position: relative;
+  cursor: pointer;
+}
+
+.imagenizq-texto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagenizq-texto img {
+  width: 200px; 
+  border: 2px solid #555;
+  border-radius: 8px; 
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+.nav-footer {
+  padding: 10px 20px;
+  width: -100px;
+}
+.nav-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-footer-left, .nav-footer-center, .nav-footer-right {
+  flex: 1;
+  text-align: center;
+}
+.nav-footer-left {
+  text-align: left;
+}
+.nav-footer-center {
+  text-align: center;
+}
+.nav-footer-right {
+  text-align: right;
+}
+.carousel-inner {
+  background-color: rgb(74, 81, 101);
+}
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* ============================
+   CARRUSEL EN PROPORCIÓN 16:9
+   ============================ */
+
+#miCarrusel {
+    width: 100%;
+}
+
+#miCarrusel .carousel-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 25.25%; /* 16:9 */
+}
+
+#miCarrusel .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#miCarrusel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* rellena sin deformar */
+    object-position: center;
+}
+

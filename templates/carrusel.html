@@ -1,0 +1,50 @@
+{% extends "index_base.html" %}
+
+{% block title %}Carrusel{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4"></h2>
+
+<div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- INDICADORES -->
+  <div class="carousel-indicators">
+    {% for item in carrusel %}
+      <button type="button"
+              data-bs-target="#miCarrusel"
+              data-bs-slide-to="{{ loop.index0 }}"
+              class="{% if loop.first %}active{% endif %}">
+      </button>
+    {% endfor %}
+  </div>
+
+  <!-- SLIDES -->
+  <div class="carousel-inner">
+    {% for item in carrusel %}
+      <div class="carousel-item {% if loop.first %}active{% endif %}">
+
+        {% if item.imagen %}
+          <img src="{{ item.imagen }}"
+               class="d-block w-100"
+               alt="Imagen {{ loop.index }}">
+        {% else %}
+          <img src="../imput/img/default.png"
+               class="d-block w-100"
+               alt="Sin imagen">
+        {% endif %}
+
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- CONTROLES -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+{% endblock %}

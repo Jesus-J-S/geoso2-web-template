@@ -1,0 +1,195 @@
+{% extends "index_base.html" %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<br><br>
+
+<!-- ========================= -->
+<!-- CARRUSEL -->
+<!-- ========================= -->
+<div id="miCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+
+    {% for item in index_page.carousel %}
+      <div class="carousel-item {% if loop.first %}active{% endif %}">
+
+        {% if item.enlace %}
+          <a href="{{ item.enlace }}" target="_blank">
+            <img src="{{ item.imagen or '../imput/img/default.png' }}"
+                 alt=""
+                 class="d-block w-100">
+          </a>
+        {% else %}
+          <img src="{{ item.imagen or '../imput/img/default.png' }}"
+               alt=""
+               class="d-block w-100">
+        {% endif %}
+
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<hr>
+
+<!-- ========================= -->
+<!-- NOTICIAS -->
+<!-- ========================= -->
+<a class="marco" href="../output/noticias.html">
+  <h3>Noticias</h3>
+</a>
+
+{% for noticia in index_page.noticias %}
+  <div class="imagenizq-texto">
+
+    {# IMAGEN #}
+    {% if noticia.link %}
+      <a href="{{ noticia.link }}">
+        <img src="{{ noticia.imagen or '../imput/img/default.png' }}" alt="{{ noticia.titulo or '' }}">
+      </a>
+
+    {% elif noticia.enlace and noticia.enlace.url %}
+      <a href="{{ noticia.enlace.url }}">
+        <img src="{{ noticia.imagen or '../imput/img/default.png' }}" alt="{{ noticia.titulo or '' }}">
+      </a>
+
+    {% else %}
+      <img src="{{ noticia.imagen or '../imput/img/default.png' }}" alt="{{ noticia.titulo or '' }}">
+    {% endif %}
+
+    <div><br>
+
+      {# TÍTULO #}
+      <h4 class="titulos">
+        {% if noticia.link %}
+          <a class="link-reset" href="{{ noticia.link }}">
+            {{ noticia.titulo or '' }}
+          </a>
+
+        {% elif noticia.enlace and noticia.enlace.url %}
+          <a class="link-reset" href="{{ noticia.enlace.url }}">
+            {{ noticia.titulo or '' }}
+          </a>
+
+        {% else %}
+          {{ noticia.titulo or '' }}
+        {% endif %}
+      </h4>
+
+      <p>{{ noticia.descripcion or '' }}</p>
+
+      {# BOTÓN LEER MÁS #}
+      {% if noticia.link %}
+        <a href="{{ noticia.link }}" class="btn btn-primary mt-2" target="_blank">
+          {{ noticia.link_text or "Leer más" }}
+        </a>
+
+      {% elif noticia.enlace and noticia.enlace.url %}
+        <a href="{{ noticia.enlace.url }}" class="btn btn-primary mt-2" target="_blank">
+          {{ noticia.enlace.texto or "Leer más" }}
+        </a>
+
+      {% else %}
+        <span class="btn btn-secondary disabled mt-2">
+          Sin enlace
+        </span>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if not loop.last %}
+    <hr>
+  {% endif %}
+{% endfor %}
+
+<hr><br>
+
+<!-- ========================= -->
+<!-- AGENDA -->
+<!-- ========================= -->
+<a class="marco" href="../output/agenda.html">
+  <h3>Agenda</h3>
+</a>
+
+{% for evento in index_page.agenda %}
+  <div class="imagenizq-texto">
+
+    {% if evento.link %}
+      <a href="{{ evento.link }}" target="_blank">
+        <img src="{{ evento.imagen or '../imput/img/default.png' }}" alt="{{ evento.titulo or '' }}">
+      </a>
+    {% else %}
+      <img src="{{ evento.imagen or '../imput/img/default.png' }}" alt="{{ evento.titulo or '' }}">
+    {% endif %}
+
+    <div><br>
+
+      <h4 class="titulos">
+        {% if evento.link %}
+          <a class="link-reset" href="{{ evento.link }}" target="_blank">
+            {{ evento.titulo or '' }}
+          </a>
+        {% else %}
+          {{ evento.titulo or '' }}
+        {% endif %}
+      </h4>
+
+      <p>{{ evento.descripcion or '' }}</p>
+
+      {% if evento.link %}
+        <a href="{{ evento.link }}" class="btn btn-primary mt-2" target="_blank">
+          Leer más
+        </a>
+      {% else %}
+        <span class="btn btn-secondary disabled mt-2">
+          Sin enlace
+        </span>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+  {% if not loop.last %}
+    <hr>
+  {% endif %}
+{% endfor %}
+
+<hr><br>
+
+<!-- ========================= -->
+<!-- ENTIDADES COLABORADORAS -->
+<!-- ========================= -->
+<h3>Entidades colaboradoras</h3>
+<div class="row text-center">
+
+  {% for col in index_page.colaboradores %}
+    <div class="col">
+
+      {% if col.enlace %}
+        <a href="{{ col.enlace }}" target="_blank">
+          <img src="{{ col.imagen or '../imput/img/default.png' }}"
+               alt="{{ col.nombre or '' }}"
+               class="img-fluid">
+        </a>
+      {% else %}
+        <img src="{{ col.imagen or '../imput/img/default.png' }}"
+             alt="{{ col.nombre or '' }}"
+             class="img-fluid">
+      {% endif %}
+
+    </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

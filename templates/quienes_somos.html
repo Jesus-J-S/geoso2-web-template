@@ -1,0 +1,144 @@
+{% extends "index_base.html" %}
+{% block title %}¿Quiénes somos?{% endblock %}
+
+{% block content %}
+<br>
+
+<div class="marco2">
+  <h3>Quiénes Somos</h3>
+</div>
+
+<br>
+
+<div class="text-center">
+  <img src="../imput/img/quienes_somos/imagen_01.png"
+       alt="desarrollo sostenible"
+       class="img-fluid"
+       width="350"
+       height="350">
+</div>
+
+{# ============================== #}
+{# SECCIONES                      #}
+{# ============================== #}
+{% for secciones in quienes_somos.secciones or [] %}
+  <div class="mx-3 mt-4">
+
+    <p class="texto-justificado">
+      {{ secciones.pregunta1 or "" }} {{ secciones.respuesta1 or "" }}
+    </p>
+
+    <p class="texto-justificado">
+      {{ secciones.pregunta2 or "" }} {{ secciones.respuesta2 or "" }}
+    </p>
+
+    <p class="texto-justificado">
+      {{ secciones.pregunta3 or "" }} {{ secciones.respuesta3 or "" }}
+    </p>
+
+    <p class="texto-justificado">
+      {{ secciones.pregunta4 or "" }} {{ secciones.respuesta4 or "" }}
+    </p>
+
+    <p class="texto-justificado">
+      {{ secciones.pregunta5 or "" }} {{ secciones.respuesta5 or "" }}
+    </p>
+
+  </div>
+{% endfor %}
+
+<div class="mx-3">
+
+  <hr style="height: 4px; background: #ccc; margin: 16px 0;">
+  <div class="marco2"><h3><strong>Investigadores</strong></h3></div>
+  <br><br>
+
+  {# ============================== #}
+  {# INVESTIGADORES                #}
+  {# ============================== #}
+  {% for inv in quienes_somos.investigadores or [] %}
+  <div class="container my-4">
+    <div class="row align-items-center">
+
+      <div class="col-md-4 text-center imagenizq-texto">
+        {% if inv.link %}
+          <a href="{{ inv.link }}">
+            <img src="{{ inv.imagen or '../imput/img/default.png' }}" style="width:300px">
+          </a>
+        {% else %}
+          <img src="{{ inv.imagen or '../imput/img/default.png' }}" style="width:300px">
+        {% endif %}
+      </div>
+
+      <div class="col-md-8">
+
+        {% if inv.link %}
+          <p>
+            <a style="color:#ffffff; font-weight:700; text-decoration:none;" href="{{ inv.link }}">
+              <h4>{{ inv.nombre or "" }}</h4>
+            </a>
+          </p>
+        {% else %}
+          <h4>{{ inv.nombre or "" }}</h4>
+        {% endif %}
+
+        <p>{{ inv.bio or "" }}</p>
+
+        {% if inv.link %}
+          <p><a style="color: #003366;" href="{{ inv.link }}">{{ inv.link_text or "Más información" }}</a></p>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+
+  <hr>
+
+  <div class="marco2"><h3><strong>Colaboradores</strong></h3></div>
+
+  {# ============================== #}
+  {# COLABORADORES                 #}
+  {# ============================== #}
+  {% for col in quienes_somos.colaboradores or [] %}
+  <div class="container my-4">
+    <div class="row align-items-center">
+
+      <div class="col-md-4 text-center imagenizq-texto">
+        {% if col.link %}
+          <a href="{{ col.link }}">
+            <img src="{{ col.imagen or '../imput/img/default.png' }}" style="width:300px">
+          </a>
+        {% else %}
+          <img src="{{ col.imagen or '../imput/img/default.png' }}" style="width:300px">
+        {% endif %}
+      </div>
+
+      <div class="col-md-8">
+
+        {% if col.link %}
+          <p>
+            <a style="color:#ffffff; font-weight:700; text-decoration:none;" href="{{ col.link }}">
+              <h4>{{ col.nombre or "" }}</h4>
+            </a>
+          </p>
+        {% else %}
+          <h4>{{ col.nombre or "" }}</h4>
+        {% endif %}
+
+        <p>{{ col.bio or "" }}</p>
+
+        {% if col.link %}
+          <p><a style="color: #003366;" href="{{ col.link }}">{{ col.link_text or "Más información" }}</a></p>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

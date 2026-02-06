@@ -1,0 +1,44 @@
+{% extends "index_base.html" %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<br>
+
+<div class="marco2">
+  {{ contacto.descripcion or "" }}
+</div>
+
+<br>
+
+<h4><strong>{{ contacto.titulo or "" }}</strong></h4>
+
+{# LOGO PROTEGIDO #}
+{% if contacto.logo and contacto.logo.src %}
+  <img src="{{ contacto.logo.src }}"
+       width="{{ contacto.logo.width or '200' }}"
+       height="{{ contacto.logo.height or '200' }}">
+{% else %}
+  <img src="../imput/img/default.png" width="200" height="200">
+{% endif %}
+
+<br>
+
+<div class="align-items-center">
+
+  {# MAPA PROTEGIDO #}
+  {% if contacto.mapa and contacto.mapa.src %}
+    <iframe
+      src="{{ contacto.mapa.src }}"
+      width="{{ contacto.mapa.width or '600' }}"
+      height="{{ contacto.mapa.height or '450' }}"
+      style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  {% else %}
+    <p>No hay mapa disponible.</p>
+  {% endif %}
+
+</div>
+
+{% endblock %}

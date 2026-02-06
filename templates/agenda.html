@@ -1,0 +1,65 @@
+{% extends "index_base.html" %}
+
+{% block title %}GEOSO2 y la Cooperación Internacional{% endblock %}
+
+{% block content %}
+<div class="mx-3 mt-4">
+  <hr style="height: 4px; background: #ccc; margin: 16px 0;">
+  <div class="marco2"><h3><strong>Agenda</strong></h3></div>
+  <br><br>
+
+  {% for evento in agenda %}
+  <div class="imagenizq-texto">
+
+    {# Imagen con protección #}
+    {% if evento.imagen %}
+      <img src="{{ evento.imagen }}" alt="{{ evento.alt or '' }}" class="imagenizq img-marco">
+    {% else %}
+      <img src="../imput/img/default.png" alt="" class="imagenizq img-marco">
+    {% endif %}
+
+    <div>
+
+      {# ----------------------------- #}
+      {# TÍTULO BLANCO UNIFICADO      #}
+      {# ----------------------------- #}
+
+      <h3 class="titulos">
+        {% if evento.link %}
+          <a href="{{ evento.link }}" target="_blank" class="link-reset">
+            {{ evento.titulo }}
+          </a>
+        {% else %}
+          {{ evento.titulo }}
+        {% endif %}
+      </h3>
+
+      <p style="color:rgba(235, 245, 255, 0.775);">
+        {% if evento.fecha %}Fecha: {{ evento.fecha }}<br>{% endif %}
+        {% if evento.hora %}Hora: {{ evento.hora }}<br>{% endif %}
+        {% if evento.lugar %}Lugar: {{ evento.lugar }}<br><br>{% endif %}
+        {{ evento.descripcion }}
+      </p>
+
+      {# Botón con protección #}
+      {% if evento.link %}
+        <a href="{{ evento.link }}" class="btn btn-primary" target="_blank">
+          {{ evento.texto_link or "Más información" }}
+        </a>
+      {% else %}
+        <span class="btn btn-secondary disabled">
+          {{ evento.texto_link or "Sin enlace" }}
+        </span>
+      {% endif %}
+
+      <br><br>
+    </div>
+  </div>
+
+  {% if not loop.last %}
+    <hr>
+  {% endif %}
+
+  {% endfor %}
+</div>
+{% endblock %}
